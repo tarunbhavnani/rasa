@@ -1,0 +1,34 @@
+ques,actioname,actioncall
+what kind of buiness,ActionBusinessKind,action_business_kind
+who r the partners and whats the shareholding pattern,ActionProp,action_prop
+who r the directors and whats the shareholding pattern,ActionPrivate,action_private
+How many years in business,ActionBusinessYears,action_business_years
+what is the industry type? I.e textiles/groceries/electronics etc,ActionBusinessIndustry,action_business_industry
+what is the nature of the business,ActionBusinessNature,action_business_nature
+where is the manu unit,ActionBusinessManufactureLocation,action_business_manufacture_location
+how many machines,ActionBusinessManufactureMachines,action_business_manufacture_machines
+Total capacity and average utilization,ActionBusinessManufactureCap,action_business_manufacture_cap
+Total number of workers,ActionBusinessManufactureWorkers,action_business_manufacture_workers
+wholesale or retail,ActionBusinessTraderType,action_business_trader_type
+purchase against order or stockist--? check for stock days in LOS(financial summary) for any follow up,ActionBusinessTraderPurchase,action_business_trader_purchase
+oredrs in hand,ActionBusinessSPOrders,action_business_sp_orders
+are these orders renewded every year,ActionBusinessSPOrdersRenew,action_business_sp_orders_renew
+how many parties do you purchase from can you name the major parties,ActionBusinessPartiesPurchase,action_business_parties_purchase
+what are the payment terms,ActionBusinessCreditPaymentTerms,action_business_credit_payment_terms
+how much creditors outstanding/ trade payable as of date  OR what is the credit position as of date,ActionBusinessCreditPos,action_business_credit_pos
+What are the stock level maintained?,ActionBusinessStockLevels,action_business_stock_levels
+"if manufaturing: Is it inclusive of raw material, wip, finished goods",ActionBusinessStockLevelsFollowup,action_business_stock_levels_followup
+if service : what kind of stock as no stock in service,ActionBusinessStockLevelsFollowup,action_business_stock_levels_followup
+"where are the goods stocked, do you own the place. Can ask the rent as well",ActionBusinessGodown,action_business_godown
+how many parties do you sell to and can u name the major parties,ActionBusinessParties,action_business_parties
+what r the payment terms / what is the credit period offered,ActionBusinessPartiesPaymentTerms,action_business_parties_payment_terms
+how much debtor outstanding/ whats the trade receivables / debtor position,ActionBusinessPartiesPosition,action_business_parties_position
+monthly sales,ActionBusinessSales,action_business_sales
+"what is the turnover till date from april what is the expectation for the full year, can pull turnover for last year",ActionBusinessTO,action_business_to
+what is cash component of the overall sales,ActionBusinessCC,action_business_cc
+what are the gross margins in the business,ActionBusinessGM,action_business_gm
+How many employees do you have?,ActionBusinessEmployees,action_business_employees
+GST margins,ActionBusinessGST,action_business_gst
+have you paid the latest gst bills,ActionBusinessGSTBills,action_business_gst_bills
+what kind of loan amount are you looking at,ActionBusinessLA,action_business_la
+End Use ?,ActionBusinessEndUse,action_business_end_use

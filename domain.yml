@@ -1,29 +1,62 @@
 %YAML 1.1
 ---
 actions:
-#- action_listen
 - action_interview_start
-- utter_family_house_own
-- action_save_family
-- utter_thanks
-#- action_restart
-- utter_goodbye
-- utter_family_stay
-- action_ask_family
-- utter_family_members
+- action_business_sp_orders_renew
+- action_business_credit_payment_terms
 - utter_greet
+- action_business_sales
+- action_business_trader_type
+- action_business_manufacture_machines
+- action_business_to
+- action_business_parties_payment_terms
+- action_private
+- action_business_sp_orders
+- action_business_manufacture_workers
+- action_business_stock_levels
+- action_business_end_use
+- action_business_years
+- action_business_parties
+- action_business_manufacture_cap
+- action_family_house_own
+- utter_thanks
+- action_business_la
+- action_business_parties_purchase
+- action_business_parties_position
+- action_business_industry
+- action_business_manufacture_location
+- action_business_employees
+- action_business_gst_bills
+- action_business_kind
+- action_prop
+- action_listen
+- action_business_stock_levels_followup
+- action_business_credit_pos
+- action_business_cc
+- action_save
+- action_business_godown
+- action_business_nature
+- action_business_trader_purchase
+- action_business_gm
+- action_family_stay
+- utter_goodbye
+- action_business_gst
 config:
   store_entities_as_slots: true
 entities:
+- nob
 - user_cell
-- number
+- bkind
 - location
 - time
+- industry
+- money
+- number
 forms: []
 intents:
-- inform
 - affirm
 - greet
+- inform
 - deny
 - joke
 - thank
@@ -41,70 +74,11 @@ intents:
 slots:
   address:
     auto_fill: true
-    initial_value: India
-    type: rasa_core.slots.TextSlot
-  business_duration:
-    auto_fill: true
     initial_value: none
     type: rasa_core.slots.TextSlot
-  business_employees:
+  last_action:
     auto_fill: true
     initial_value: none
-    type: rasa_core.slots.TextSlot
-  business_gist:
-    auto_fill: true
-    initial_value: none
-    type: rasa_core.slots.TextSlot
-  business_office_location:
-    auto_fill: true
-    initial_value: none
-    type: rasa_core.slots.TextSlot
-  business_partner:
-    auto_fill: true
-    initial_value: none
-    type: rasa_core.slots.TextSlot
-  business_pc_own:
-    auto_fill: true
-    initial_value: none
-    type: rasa_core.slots.TextSlot
-  business_premises:
-    auto_fill: true
-    initial_value: none
-    type: rasa_core.slots.TextSlot
-  business_premises_duration:
-    auto_fill: true
-    initial_value: none
-    type: rasa_core.slots.TextSlot
-  business_premises_rented:
-    auto_fill: true
-    initial_value: none
-    type: rasa_core.slots.TextSlot
-  business_turnover_last:
-    auto_fill: true
-    initial_value: none
-    type: rasa_core.slots.TextSlot
-  business_turnover_now:
-    auto_fill: true
-    initial_value: none
-    type: rasa_core.slots.TextSlot
-  counter:
-    auto_fill: true
-    initial_value: interview_start
-    type: rasa_core.slots.TextSlot
-  family_house_own:
-    auto_fill: true
-    type: rasa_core.slots.TextSlot
-  family_involve:
-    auto_fill: true
-    type: rasa_core.slots.TextSlot
-  family_involve_explain:
-    auto_fill: true
-    type: rasa_core.slots.TextSlot
-  family_members:
-    auto_fill: true
-    type: rasa_core.slots.TextSlot
-  family_stay:
-    auto_fill: true
     type: rasa_core.slots.TextSlot
   loan_requested:
     auto_fill: true
@@ -112,7 +86,7 @@ slots:
     type: rasa_core.slots.TextSlot
   org_name:
     auto_fill: true
-    initial_value: Unknown
+    initial_value: none
     type: rasa_core.slots.TextSlot
   user_cell:
     auto_fill: true
@@ -123,12 +97,6 @@ slots:
     initial_value: Dear
     type: rasa_core.slots.TextSlot
 templates:
-  utter_chitchat:
-  - text: chit chat Blah Blah!!
-  utter_family_members:
-  - text: How many members are there in your family?
-  utter_family_stay:
-  - text: Where do you stay?
   utter_goodbye:
   - text: Talk to you later!
   - text: Goodbye :(
@@ -137,7 +105,5 @@ templates:
   - text: Awesome talking to you,,CU soon!!
   utter_greet:
   - text: hi {user_name}!!
-  utter_house_own:
-  - text: Do you own the house you currently stay in?
   utter_thanks:
   - text: Thanks!!

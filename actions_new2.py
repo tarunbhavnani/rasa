@@ -76,8 +76,9 @@ class ActionBusinessKind(Action):
 
     def run(self, dispatcher, tracker, domain):
       
+      last_action= tracker.get_slot('this_action')
       this_action="action_business_kind"
-      last_action= tracker.get_slot('last_action')
+      
       dispatcher.utter_message("What kind of business do you have?\n 1) Proprietership \n 2) Partnership \n 3) Private Ltd. \n 4) Public Ltd.")
       ActionSave.run('action_save',dispatcher, tracker, domain)
   
@@ -92,8 +93,9 @@ class ActionFamilyStay(Action):
 
     def run(self, dispatcher, tracker, domain):
     
+      last_action= tracker.get_slot('this_action')
       this_action="action_family_stay"
-      last_action= tracker.get_slot('last_action')
+      
       dispatcher.utter_message("Where do you stay?")
       ActionSave.run('action_save',dispatcher, tracker, domain)
       
@@ -107,8 +109,8 @@ class ActionFamilyHouseOwn(Action):
 
     def run(self, dispatcher, tracker, domain):
 
+      last_action= tracker.get_slot('this_action')
       this_action="action_family_house_own"
-      last_action= tracker.get_slot('last_action')
       dispatcher.utter_message("Do you own the house?")
       ActionSave.run('action_save',dispatcher, tracker, domain)
   
@@ -121,7 +123,7 @@ class ActionSave(Action):
 
     def run(self, dispatcher, tracker, domain):
       
-      last_action= tracker.get_slot('last_action')
+      last_action= tracker.get_slot('this_action')
       
       if last_action=='action_family_stay':
         family_stay = next(tracker.get_latest_entity_values('location'), None)
@@ -172,9 +174,10 @@ class ActionBusinessKind(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_kind"
-        last_action= tracker.get_slot('last_action')
-        dispatcher.utter_message('what kind of buiness')
+        
+        dispatcher.utter_message("What kind of business do you have?\n 1) Proprietership \n 2) Partnership \n 3) Private Ltd. \n 4) Public Ltd.")
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
         return [SlotSet('last_action', last_action), SlotSet('this_action', this_action)]
@@ -188,9 +191,9 @@ class ActionProp(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_prop"
-        last_action= tracker.get_slot('last_action')
-        dispatcher.utter_message('who r the partners and whats the shareholding pattern')
+        dispatcher.utter_message('Can you please name the partners and their respective shareholding pattern?')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
         return [SlotSet('last_action', last_action), SlotSet('this_action', this_action)]
@@ -204,9 +207,10 @@ class ActionPrivate(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_private"
-        last_action= tracker.get_slot('last_action')
-        dispatcher.utter_message('who r the directors and whats the shareholding pattern')
+        
+        dispatcher.utter_message('Can you please name the Directors and their respective shareholding pattern?')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
         return [SlotSet('last_action', last_action), SlotSet('this_action', this_action)]
@@ -220,9 +224,9 @@ class ActionBusinessYears(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_years"
-        last_action= tracker.get_slot('last_action')
-        dispatcher.utter_message('How many years in business')
+        dispatcher.utter_message('How many years have you been in this business?')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
         return [SlotSet('last_action', last_action), SlotSet('this_action', this_action)]
@@ -236,9 +240,10 @@ class ActionBusinessIndustry(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_industry"
-        last_action= tracker.get_slot('last_action')
-        dispatcher.utter_message('what is the industry type? I.e textiles/groceries/electronics etc')
+        
+        dispatcher.utter_message('what is the industry type? \n 1)textiles\n 2)groceries\n 3)electronics\n 4) Others')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
         return [SlotSet('last_action', last_action), SlotSet('this_action', this_action)]
@@ -252,9 +257,10 @@ class ActionBusinessNature(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_nature"
-        last_action= tracker.get_slot('last_action')
-        dispatcher.utter_message('what is the nature of the business')
+        
+        dispatcher.utter_message('what is the nature of the business:\n 1) Manufacturing\n 2) Trader\n 3)Service')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
         return [SlotSet('last_action', last_action), SlotSet('this_action', this_action)]
@@ -268,8 +274,9 @@ class ActionBusinessManufactureLocation(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_manufacture_location"
-        last_action= tracker.get_slot('last_action')
+        
         dispatcher.utter_message('where is the manu unit')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
@@ -284,8 +291,9 @@ class ActionBusinessManufactureMachines(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_manufacture_machines"
-        last_action= tracker.get_slot('last_action')
+        
         dispatcher.utter_message('how many machines')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
@@ -300,8 +308,9 @@ class ActionBusinessManufactureCap(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_manufacture_cap"
-        last_action= tracker.get_slot('last_action')
+        
         dispatcher.utter_message('Total capacity and average utilization')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
@@ -316,8 +325,9 @@ class ActionBusinessManufactureWorkers(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_manufacture_workers"
-        last_action= tracker.get_slot('last_action')
+        
         dispatcher.utter_message('Total number of workers')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
@@ -331,8 +341,9 @@ class ActionBusinessTraderType(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_trader_type"
-        last_action= tracker.get_slot('last_action')
+        
         dispatcher.utter_message('wholesale or retail')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
@@ -347,8 +358,9 @@ class ActionBusinessTraderPurchase(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_trader_purchase"
-        last_action= tracker.get_slot('last_action')
+        
         dispatcher.utter_message('purchase against order or stockist--? check for stock days in LOS(financial summary) for any follow up')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
@@ -363,8 +375,9 @@ class ActionBusinessSPOrders(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_sp_orders"
-        last_action= tracker.get_slot('last_action')
+        
         dispatcher.utter_message('oredrs in hand')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
@@ -379,8 +392,9 @@ class ActionBusinessSPOrdersRenew(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_sp_orders_renew"
-        last_action= tracker.get_slot('last_action')
+        
         dispatcher.utter_message('are these orders renewded every year')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
@@ -395,8 +409,9 @@ class ActionBusinessPartiesPurchase(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_parties_purchase"
-        last_action= tracker.get_slot('last_action')
+        
         dispatcher.utter_message('how many parties do you purchase from can you name the major parties')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
@@ -411,8 +426,9 @@ class ActionBusinessCreditPaymentTerms(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_credit_payment_terms"
-        last_action= tracker.get_slot('last_action')
+        
         dispatcher.utter_message('what are the payment terms')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
@@ -427,8 +443,9 @@ class ActionBusinessCreditPos(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_credit_pos"
-        last_action= tracker.get_slot('last_action')
+        
         dispatcher.utter_message('how much creditors outstanding/ trade payable as of date  OR what is the credit position as of date')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
@@ -443,8 +460,9 @@ class ActionBusinessStockLevels(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_stock_levels"
-        last_action= tracker.get_slot('last_action')
+        
         dispatcher.utter_message('What are the stock level maintained?')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
@@ -459,8 +477,9 @@ class ActionBusinessStockLevelsFollowup(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_stock_levels_followup"
-        last_action= tracker.get_slot('last_action')
+        
         #if manufaturing:
         dispatcher.utter_message('Is it inclusive of raw material, wip, finished goods')
         #dispatcher.utter_message('if service : what kind of stock as no stock in service')
@@ -491,8 +510,9 @@ class ActionBusinessGodown(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_godown"
-        last_action= tracker.get_slot('last_action')
+        
         dispatcher.utter_message('where are the goods stocked, do you own the place. Can ask the rent as well')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
@@ -507,8 +527,9 @@ class ActionBusinessParties(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_parties"
-        last_action= tracker.get_slot('last_action')
+        
         dispatcher.utter_message('how many parties do you sell to and can u name the major parties')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
@@ -523,8 +544,9 @@ class ActionBusinessPartiesPaymentTerms(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_parties_payment_terms"
-        last_action= tracker.get_slot('last_action')
+        
         dispatcher.utter_message('what r the payment terms / what is the credit period offered')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
@@ -539,8 +561,9 @@ class ActionBusinessPartiesPosition(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_parties_position"
-        last_action= tracker.get_slot('last_action')
+        
         dispatcher.utter_message('how much debtor outstanding/ whats the trade receivables / debtor position')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
@@ -555,8 +578,9 @@ class ActionBusinessSales(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_sales"
-        last_action= tracker.get_slot('last_action')
+        
         dispatcher.utter_message('monthly sales')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
@@ -571,8 +595,9 @@ class ActionBusinessTO(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_to"
-        last_action= tracker.get_slot('last_action')
+        
         dispatcher.utter_message('what is the turnover till date from april what is the expectation for the full year, can pull turnover for last year')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
@@ -587,8 +612,9 @@ class ActionBusinessCC(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_cc"
-        last_action= tracker.get_slot('last_action')
+        
         dispatcher.utter_message('what is cash component of the overall sales')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
@@ -603,8 +629,9 @@ class ActionBusinessGM(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_gm"
-        last_action= tracker.get_slot('last_action')
+        
         dispatcher.utter_message('what are the gross margins in the business')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
@@ -619,8 +646,9 @@ class ActionBusinessEmployees(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_employees"
-        last_action= tracker.get_slot('last_action')
+        
         dispatcher.utter_message('How many employees do you have?')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
@@ -635,8 +663,9 @@ class ActionBusinessGST(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_gst"
-        last_action= tracker.get_slot('last_action')
+        
         dispatcher.utter_message('GST margins')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
@@ -651,8 +680,9 @@ class ActionBusinessGSTBills(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_gst_bills"
-        last_action= tracker.get_slot('last_action')
+        
         dispatcher.utter_message('have you paid the latest gst bills')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
@@ -667,8 +697,9 @@ class ActionBusinessLA(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_la"
-        last_action= tracker.get_slot('last_action')
+        
         dispatcher.utter_message('what kind of loan amount are you looking at')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         
@@ -683,8 +714,9 @@ class ActionBusinessEndUse(Action):
       
       def run(self, dispatcher, tracker, domain):
         
+        last_action= tracker.get_slot('this_action')
         this_action="action_business_end_use"
-        last_action= tracker.get_slot('last_action')
+        
         dispatcher.utter_message('End Use ?')
         ActionSave.run('action_save',dispatcher, tracker, domain)
         

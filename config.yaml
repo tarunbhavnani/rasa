@@ -1,0 +1,14 @@
+policies:
+  - name: "KerasPolicy"
+    featurizer:
+    - name: MaxHistoryTrackerFeaturizer
+      max_history: 5
+      state_featurizer:
+        - name: BinarySingleStateFeaturizer
+  - name: "MemoizationPolicy"
+    max_history: 5
+  - name: "FallbackPolicy"
+    nlu_threshold: 0.3
+    core_threshold: 0.5
+    fallback_action_name: "action_default_fallback"
+

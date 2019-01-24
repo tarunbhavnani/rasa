@@ -1,0 +1,111 @@
+%YAML 1.1
+---
+actions:
+- action_manu_unit_manage
+- action_purchase_payment
+- action_public2
+- action_gst_status
+- action_turnover
+- action_manu_machine
+- action_trader_logistics
+- action_manu_loc
+- utter_greet
+- action_employees
+- action_sp_order
+- action_prop_business_years_explain
+- action_nob
+- action_manu_utl
+#- action_restart
+- action_ccod
+- action_sp_order2
+- action_debt_outstanding
+- action_monthly_sales
+#- action_listen
+- utter_goodbye
+- action_cd
+- action_interview_start
+- action_ubl_follow
+- action_fetch_details
+- action_end_use
+- action_sell_payment
+- action_trader_galla
+- action_gl
+- action_public
+- action_business_kind
+- action_partner
+- action_business_years
+- action_credit_outstanding
+- action_partner_explain
+- action_gross_margins
+- action_ubl_enquiry
+- action_private
+- action_stock_level
+- action_stock_level2
+- action_hvc
+- utter_default
+- action_gst
+- action_ubl
+- action_cash
+- action_trader_godown
+- action_trader
+- action_industry_type
+- action_purchase_parties
+- action_sell_parties
+- action_emi_bounce
+- action_loan_amount
+- action_mcd
+- action_bto
+- utter_thanks
+- action_manu_workers
+- action_default_fallback
+config:
+  store_entities_as_slots: false
+entities: []
+forms: []
+intents:
+- inform
+- greet
+- manufacturing
+- affirm
+- pvt
+- public
+- SP
+- partnership
+- deny
+- goodbye
+- prop
+- trader
+slots:
+  counter:
+    auto_fill: true
+    initial_value: false
+    type: rasa_core.slots.UnfeaturizedSlot
+  finish_interview:
+    auto_fill: true
+    initial_value: false
+    type: rasa_core.slots.UnfeaturizedSlot
+  next_question_jump:
+    auto_fill: true
+    initial_value: false
+    type: rasa_core.slots.UnfeaturizedSlot
+  user_cell:
+    auto_fill: true
+    initial_value: none
+    type: rasa_core.slots.TextSlot
+  user_name:
+    auto_fill: true
+    initial_value: Dear
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_default:
+  - text: I didn't understand. Can you please rephrase your answer
+  utter_goodbye:
+  - text: Talk to you later!
+  - text: Goodbye :(
+  - text: Bye!
+  - text: Have a great day!
+  - text: Awesome talking to you,,CU soon!!
+  utter_greet:
+  - text: hi {user_name}!!
+  utter_thanks:
+  - text: Thanks!!

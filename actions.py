@@ -90,7 +90,7 @@ class Actioninterviewstart(Action):
            return[]
         
 
-
+# the actions which have bifurcations are bifurcated in fallback as well see below:
 class ActionDefaultFallback(Action):
     def name(self):
         #return "action_question_counter"

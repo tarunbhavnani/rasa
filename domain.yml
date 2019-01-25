@@ -58,6 +58,7 @@ actions:
 - utter_thanks
 - action_manu_workers
 - action_default_fallback
+- utter_chitchat
 config:
   store_entities_as_slots: false
 entities: []
@@ -75,8 +76,13 @@ intents:
 - goodbye
 - prop
 - trader
+- chitchat
 slots:
   counter:
+    auto_fill: true
+    initial_value: false
+    type: rasa_core.slots.UnfeaturizedSlot
+  current:
     auto_fill: true
     initial_value: false
     type: rasa_core.slots.UnfeaturizedSlot
@@ -99,6 +105,8 @@ slots:
 templates:
   utter_default:
   - text: I didn't understand. Can you please rephrase your answer
+  utter_chitchat:
+  - text: please no chitchat
   utter_goodbye:
   - text: Talk to you later!
   - text: Goodbye :(

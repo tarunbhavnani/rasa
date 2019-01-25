@@ -1,0 +1,11 @@
+## greet
+* greet
+    - action_interview_start
+## goodbye
+* goodbye
+    - utter_goodbye
+    - action_restart
+## chitchat
+* chitchat
+    - utter_chitchat
+    - action_default_fallback

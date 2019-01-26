@@ -1,71 +1,73 @@
 %YAML 1.1
 ---
 actions:
-- action_manu_unit_manage
-- action_purchase_payment
-- action_public2
-- action_gst_status
-- action_turnover
-- action_manu_machine
-- action_trader_logistics
-- action_manu_loc
-- utter_greet
-- action_employees
-- action_sp_order
-- action_prop_business_years_explain
-- action_nob
-- action_manu_utl
-#- action_restart
-- action_ccod
-- action_sp_order2
-- action_debt_outstanding
-- action_monthly_sales
-#- action_listen
-- utter_goodbye
-- action_cd
-- action_interview_start
-- action_ubl_follow
-- action_fetch_details
-- action_end_use
-- action_sell_payment
-- action_trader_galla
-- action_gl
-- action_public
-- action_business_kind
-- action_partner
-- action_business_years
-- action_credit_outstanding
-- action_partner_explain
-- action_gross_margins
-- action_ubl_enquiry
-- action_private
-- action_stock_level
-- action_stock_level2
-- action_hvc
-- utter_default
-- action_gst
-- action_ubl
-- action_cash
-- action_trader_godown
-- action_trader
-- action_industry_type
-- action_purchase_parties
-- action_sell_parties
-- action_emi_bounce
-- action_loan_amount
-- action_mcd
 - action_bto
-- utter_thanks
 - action_manu_workers
-- action_default_fallback
+- action_partner
+- action_ubl
+- action_private
+- action_sell_payment
+- action_chitchat
+- action_industry_type
+- action_hvc
+- action_prop_business_years_explain
+- action_loan_amount
+- action_business_years
+- utter_thanks
+- action_gross_margins
+- action_monthly_sales
+- action_end_use
+- action_interview_start
+- action_stock_level2
+- action_turnover
+- action_sp_order
+- action_purchase_payment
+- utter_greet
+- action_gl
+- action_manu_utl
+- action_sell_parties
+- utter_default
+- action_cd
+- utter_goodbye
+- action_partner_explain
+- action_stock_level
+- action_credit_outstanding
+#- action_listen
+- action_manu_unit_manage
+- action_trader_galla
+- action_manu_loc
+- action_gst_status
+- action_cash
+- action_manu_machine
+- action_stop
+- action_thanks
+- action_nob
+- action_debt_outstanding
+- action_trader_logistics
+- action_fetch_details
+- action_ubl_follow
+- action_emi_bounce
+- action_gst
+- action_ccod
+- action_purchase_parties
+- action_trader
+- action_employees
+- action_public
+- action_mcd
+- action_sp_order2
+- action_public2
+- action_ubl_enquiry
+- action_trader_godown
+- action_business_kind
 - utter_chitchat
+- action_default_fallback
 config:
   store_entities_as_slots: false
 entities: []
 forms: []
 intents:
-- inform
 - greet
+- inform
 - manufacturing
 - affirm
 - pvt
@@ -77,6 +79,8 @@ intents:
 - prop
 - trader
 - chitchat
+- thank
+- stop
 slots:
   counter:
     auto_fill: true
@@ -86,9 +90,9 @@ slots:
     auto_fill: true
     initial_value: false
     type: rasa_core.slots.UnfeaturizedSlot
-  finish_interview:
+  interview_state:
     auto_fill: true
-    initial_value: false
+    initial_value: start
     type: rasa_core.slots.UnfeaturizedSlot
   next_question_jump:
     auto_fill: true
@@ -103,10 +107,13 @@ slots:
     initial_value: Dear
     type: rasa_core.slots.TextSlot
 templates:
+  utter_chitchat:
+  - text: Please cut the chitchat and answer the interview!
+  - text: chitcha bla bla..
+  - text: can we now continue to the interview.
+  - text: see i dont have as much time, please answer and free me.
   utter_default:
   - text: I didn't understand. Can you please rephrase your answer
-  utter_chitchat:
-  - text: please no chitchat
   utter_goodbye:
   - text: Talk to you later!
   - text: Goodbye :(
@@ -116,4 +123,6 @@ templates:
   utter_greet:
   - text: hi {user_name}!!
   utter_thanks:
-  - text: Thanks!!
+  - text: Thank alot mothafukaa!!
+  - text: thenks hain thenks!
+  - text: shukrriya my man!!

@@ -346,7 +346,7 @@ class Actioninterviewstart(Action):
       user_cell=tracker.get_slot('user_cell')
         
       if (user_name=="Dear" and user_cell=="none"):
-           dispatcher.utter_message("Kindly input your registration id- cell number to begin the interview. Use 7838930304 for Demo!")
+           dispatcher.utter_message("Kindly input your registration id- cell number to begin the interview. Use 12345 for Demo!")
            return[FollowupAction("action_listen"),SlotSet('counter', counter),SlotSet('current', current) ]
       else:
            dispatcher.utter_message("Continue plz.")
@@ -415,8 +415,8 @@ class ActionPrivate(Action):
     def run(self, dispatcher, tracker, domain):
       user_cell= tracker.get_slot("user_cell")
       directors=str(df[df.applicant_1_phone==int(user_cell)].directors.item())
-      if len(directors)>2:#this is the length of sentence not the number of directors
-        dispatcher.utter_message("As per your records: {} are the directors of the company. Please confirm this!".format(directors))
+      if len(directors)>5:#this is the length of sentence not the number of directors
+        dispatcher.utter_message("As per your records: {} is(are) the directors of the company. Please confirm this!".format(directors))
       else:
         dispatcher.utter_message("Please specify the directors in the company")
       #ActionSave.run('action_save',dispatcher, tracker, domain)
@@ -567,10 +567,22 @@ class ActionBusinessYearsExplain(Action):
         
         if date:
           if "years" in date:
-            years=re.findall('\d+', date )
-            years= int(re.findall('\d+', date)[0])
+            #years=re.findall('\d+', date )
+            try:
+              years= int(re.findall('\d+', date)[0])
+            except:
+              try:
+                years= w2n.word_to_num(date.split()[0])##################################################################3
+              except:
+                years=0
           elif "months" in date:
-            years= round(int(re.findall('\d+', date)[0])/12)
+            try:
+              years= round(int(re.findall('\d+', date)[0])/12)
+            except:
+              try:
+                years= round(int(w2n.word_to_num(date.split()[0]))/12)
+              except:
+                years=0
           else:
             years=0
         
@@ -1132,12 +1144,14 @@ class Actionmanu2(Action):
       #see why we have current as decide flow!!
       #industry= tracker.get_slot("industry")
       last_intent= tracker.latest_message['intent'].get('name')
-      #last_message= tracker.latest_message['text']
-      if last_intent=="affirm":
+      last_message= tracker.latest_message['text']
+      last_message= last_message.lower()
+      if (last_intent=="affirm") or (last_message=="inhouse") or (last_intent=="inhouse"):
         #dispatcher.utter_message("Do you have any tie-ups with Swiggy, UberEats, Zomato etc. Please specify.")
         counter="action_manu3"
         return [SlotSet('current', current),SlotSet('counter', counter),FollowupAction(counter)]
-      elif last_intent=="deny":
+      
+      elif (last_intent=="deny") or (last_message=="outsourced") or (last_intent=="outsource"):
         counter="action_manu20"
         return [SlotSet('current', current),SlotSet('counter', counter),FollowupAction(counter)]
       else:
@@ -1771,7 +1785,6 @@ class ActionEMIBounce(Action):
         pass
       return[FollowupAction("action_default_fallback"),SlotSet('counter', counter),SlotSet('current', current)]
        
-
 
 
 

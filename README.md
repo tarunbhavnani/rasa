@@ -4,8 +4,8 @@ Rasa Open Source Interview Bot
 - This is an AI bot built on Rasa Stack.
 - Purpose is to take on interviews.
 - Rasa uses two sets of deep learning frameworks.
-  -1) For intent classification, also called Rasa NLU.
-  -2) For flow of converstaions. It gets trained on the stories(as rasa calls it). 
+  - For intent classification, also called Rasa NLU.
+  - For flow of converstaions. It gets trained on the stories(as rasa calls it). 
       Every utterance is classified as some intent by the NLU and it also extracts the slots, which might be
       names/ time locations etc. We train a model also called rasa_core on this data and thus predict the next action 
       after each utterance from the user.

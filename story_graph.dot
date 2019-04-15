@@ -1,0 +1,21 @@
+digraph  {
+0 [label=START, fillcolor=green, style=filled, fontsize=12, class="start active"];
+"-1" [label=END, fillcolor=red, style=filled, fontsize=12, class=end];
+1 [label=action_interview_start, fontsize=12, class=active];
+2 [label=action_default_fallback, fontsize=12, class=active];
+3 [label=action_fetch_details, fontsize=12, class=active];
+7 [label=action_business_kind, fontsize=12, class=active];
+8 [label=action_default_fallback, fontsize=12, class="dashed active"];
+9 [label=hi, shape=rect, style=filled, fillcolor=lightblue, class="intent active"];
+10 [label=7838930304, shape=rect, style=filled, fillcolor=lightblue, class="intent active"];
+11 [label="Partnership (/partnership{\"bkind\": \"partner\"})", shape=rect, style=filled, fillcolor=lightblue, class="intent active"];
+0 -> 9  [key=0, class=active];
+1 -> 10  [key=0, class=active];
+2 -> 3  [key=NONE, label="", class=active];
+3 -> "-1"  [key=NONE, label="", class=""];
+3 -> 7  [key=NONE, label="", class=active];
+7 -> 11  [key=0, class=active];
+9 -> 1  [key=0, class=active];
+10 -> 2  [key=0, class=active];
+11 -> 8  [key=0, class=active];
+}

@@ -1,0 +1,246 @@
+%YAML 1.1
+---
+actions:
+- action_chitchat
+- utter_thanks
+- utter_default
+- action_sell_payment
+- action_debt_outstanding
+- action_public2
+- action_gst_status
+- action_turnover
+- action_credit_outstanding
+- action_business_years_explain
+- action_cash
+- action_purchase_parties
+- action_sell_parties
+- action_partner
+- action_thanks
+- action_employees
+- action_sp_order2
+- action_default_fallback
+- action_monthly_sales
+- utter_goodbye
+- action_business_kind
+- action_private
+- action_industry_type
+- action_loan_amount
+- action_emi_bounce
+- action_nob
+- action_stock_level2
+- action_ubl_enquiry
+- action_sp_order
+- action_public
+- action_end_use
+- action_trader
+- action_trader2
+- action_trader3
+- action_trader4
+- action_trader5
+- action_stop
+- action_ccod
+- action_ubl
+- action_trader_logistics
+- action_purchase_payment
+- action_partner_explain
+- action_interview_start
+- action_business_years
+- action_stock_level
+- action_gross_margins
+- action_trader_galla
+- utter_chitchat
+- utter_greet
+- action_fetch_details
+- action_trader_godown
+- action_bto
+- action_industry_followup
+- utter_ask_nob
+- utter_ask_business_kind
+- utter_ask_industry
+- action_trader_auth
+- action_stop_check
+- action_decide_flow
+- action_hotel
+- action_hotel2
+- action_hotel3
+- action_hotel4
+- action_hotel5
+- action_hotel6
+- action_credit
+- action_credit2
+- action_credit3
+- action_credit4
+- action_debit
+- action_debit2
+- action_manu
+- action_manu1
+- action_manu2
+- action_manu3
+- action_manu4
+- action_manu5
+- action_manu6
+- action_manu7
+- action_manu8
+- action_manu20
+- action_fmcg
+- action_chemical
+- action_chemical2
+- action_garments
+- action_footwear
+- action_footwear2
+- action_footwear3
+- action_footwear4
+- action_footwear20
+- action_footwear21
+- action_family
+- action_family2
+- action_family3
+- action_family4
+- action_family5
+- action_ref
+- action_ref2
+config:
+  store_entities_as_slots: false
+entities: []
+forms: []
+intents:
+- greet:
+    use_entities: true
+- inform:
+    use_entities: true
+- manufacturing:
+    use_entities: true
+- affirm:
+    use_entities: true
+- private:
+    use_entities: true
+- public:
+    use_entities: true
+- SP:
+    use_entities: true
+- partnership:
+    use_entities: true
+- deny:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- prop:
+    use_entities: true
+- trader:
+    use_entities: true
+- chitchat:
+    use_entities: true
+- thank:
+    use_entities: true
+- stop:
+    use_entities: true
+slots:
+  bkind:
+    auto_fill: true
+    initial_value: false
+    type: rasa_core.slots.UnfeaturizedSlot
+  counter:
+    auto_fill: true
+    initial_value: false
+    type: rasa_core.slots.UnfeaturizedSlot
+  current:
+    auto_fill: true
+    initial_value: false
+    type: rasa_core.slots.UnfeaturizedSlot
+  industry:
+    auto_fill: true
+    initial_value: false
+    type: rasa_core.slots.UnfeaturizedSlot
+  interview_state:
+    auto_fill: true
+    initial_value: start
+    type: rasa_core.slots.UnfeaturizedSlot
+  nob:
+    auto_fill: true
+    initial_value: false
+    type: rasa_core.slots.UnfeaturizedSlot
+  trader_type:
+    auto_fill: true
+    initial_value: false
+    type: rasa_core.slots.UnfeaturizedSlot
+  user_cell:
+    auto_fill: true
+    initial_value: none
+    type: rasa_core.slots.TextSlot
+  user_name:
+    auto_fill: true
+    initial_value: Dear
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_ask_business_kind:
+  - buttons:
+    - payload: public
+      title: पब्लिक
+    - payload: private
+      title: प्राइवेट
+    - payload: prop
+      title: प्रोप्रिएटरी
+    - payload: partnership
+      title: पार्टनरशिप
+    text: यह किस तरह का व्यवसाय है?
+  utter_ask_industry:
+  - buttons:
+    - payload: garments
+      title: गारमेंट्स
+    - payload: fmcg
+      title: FMCG
+    - payload: chemical
+      title: केमिकल
+    - payload: hotel
+      title: होटल
+    - payload: footwear
+      title: फुटवियर
+    text: उद्योग का प्रकार क्या है?
+  utter_ask_manu:
+  - buttons:
+    - payload: 'Yes'
+      title: Inhouse
+    - payload: 'No'
+      title: Outsourced
+    text: 'Manufacturing is:'
+  utter_ask_nob:
+  - buttons:
+    - payload: manufacturing
+      title: मैन्युफैक्चरिंग
+    - payload: trader
+      title: ट्रेडर
+    - payload: SP
+      title: सर्विस प्रोवाइडर
+    text: किस प्रकार का व्यापार?
+  utter_ask_trader_type:
+  - buttons:
+    - payload: retail
+      title: रिटेल
+    - payload: wholesale
+      title: थोक
+    - payload: both
+      title: दोनों
+    text: आप किस तरह का व्यापार करते हैं?
+  utter_chitchat:
+  - text: नहीं समझे। मैं फिर से पूछूंगा
+  - text: मुझे समझ नहीं आया, मैं फिर से पूछूंगा
+  - text: क्या आप फिर से अपना जवाब दोहरा सकते हैं, मैं फिर से पूछूंगा
+  utter_default:
+  - text: क्या आप फिर से अपना जवाब दोहरा सकते हैं, मैं फिर से पूछूंगा
+  utter_goodbye:
+  - text: गुडबाय :(
+  - text: Bye!
+  utter_greet:
+  - text: hi {user_name}!!
+  - text: नमस्ते
+  - text: Namaste!!
+  utter_stop_check:
+  - buttons:
+    - payload: 'Yes'
+      title: हां, मैं इंटरव्यू से बाहर निकलना चाहता हूं।
+    - payload: 'No'
+      title: 'नहीं, इंटरव्यू जारी रखें '
+    text: क्या आप वाकई इंटरव्यू छोड़ना चाहते हैं?
+  utter_thanks:
+  - text: आपका धन्यवाद!
+  - text: धन्यवाद!

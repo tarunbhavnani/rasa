@@ -30,12 +30,37 @@
 - chup kar
 - fuck off
 - fuckoff
+- abc
+- what do you mean
+
+
+## intent: stop
+- stop
+
+## intent: outsource
+- outsource
+- out sourced
+- outsrcd
+- out
+
+## intent: inhouse
+- in
+- inhouse
+- inhs
+
+
+
+## intent: goodbye
+- goodbye
+- bye
+- bye bye
+
 
 
 ## intent:thank
 - Thanks
 - Thank you
-- Thank you so much
+- Thank you 
 - Thanks bot
 - Thanks for that
 - cheers
@@ -516,6 +541,8 @@
 - this and this
 - so so doubts
 - doubts and doubts
+- business
+- some other job
 
 
 
@@ -551,7 +578,7 @@
 - it is propreitership
 - its properiteship
 
-## intent:pvt
+## intent:private
 - private
 - it's private
 - private
@@ -622,4 +649,50 @@
 - public
 - pub
 - publik
+
+
+## intent: repeat
+- what
+- what?
+- repeat
+- pardon
+- can you say that again
+- can you please repeat
+- repeat please
+- i did not understand
+- not understood
+- what?
+- whatt??
+- i didnt get it
+
+
+## intent: fmcg
+- fmcg
+- fmcg
+- FMCG
+
+## intent: garments
+- garments
+- gaments
+- clothes
+
+## intent: footwear
+- footwear
+- foowear
+- shoes
+
+## intent: chemicals
+- chemicals
+- chemic
+- chemical
+
+
+
+
+
+
+
+
+
+
 

@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/tarun.bhavnani@dev.smecorner.com/Desktop/final_bot/final_bot6_hindi/models/nlu/default/latest_nlu/intent_classifier_tensorflow_embedding.ckpt"
+all_model_checkpoint_paths: "/home/tarun.bhavnani@dev.smecorner.com/Desktop/final_bot/final_bot6_hindi/models/nlu/default/latest_nlu/intent_classifier_tensorflow_embedding.ckpt"

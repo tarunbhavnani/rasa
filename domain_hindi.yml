@@ -235,7 +235,7 @@ templates:
     buttons:
     - title: "रिटेल"
       payload: "retail"
-    - title: "थोक/होलसेल"
+    - title: "थोक"
       payload: "wholesale"
     - title: "दोनों"
       payload: "both"

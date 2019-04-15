@@ -4,6 +4,11 @@
 Created on Wed Jan 30 10:37:42 2019
 
 @author: tarun.bhavnani@dev.smecorner.com
+
+one counter for last uttered, in case of repeat the bot still is on the last utterance
+one counter for the previous action as well in case of rep
+
+
 """
 
 from __future__ import absolute_import
@@ -33,62 +38,18 @@ import datetime
 nlp= spacy.load("en")
 
 df = pd.read_excel('data_los.xlsx')
-df_counter=pd.read_csv('df_counter.csv')
-df_counter['ans']=""
-df_slots=pd.read_csv("df_slots.csv")
-
-def extract_names(text):
-  text_nlp= nlp(text)
-  text_nlp= [(i.text, i.tag_) for i in text_nlp]
-  grammar = "NP: {<JJ>*<NN>+|<VB>*<NN>+}"
-  grammar = "NP: {<NN>+}"
-  cp = nltk.RegexpParser(grammar)
-  names=[]
-  result= cp.parse(text_nlp) 
-  #print(result)
-  for subtree in result.subtrees(filter=lambda t: t.label() == 'NP'):    
-    name=""
-    for i in range(len(subtree)):
-      name=name+" "+subtree[i][0]
-    names.append(name[1:])
-  return(names)
-
-def extract_number(text):
-  date=[]
-  digits=[i for i in re.findall('\d+', text )]
-  intr = RasaNLUInterpreter("./models/nlu/default/latest_nlu")
-  io=intr.parse(text)
-  for i in range(len(io['entities'])):
-    if io['entities'][i]['entity']=='DATE' or io['entities'][i]['entity']=="CARDINAL":
-      date.append(io['entities'][i]['value'])
-
-  return digits, date
 
 
-extract_names("what are you doing in paris")
 
 logger = logging.getLogger(__name__)
 
 
-"""
-precedence of events in action default
-1) before interview start
-
-2) after interview start
-  - intent: if intents deserves a reaction, continue with current/counter as fit
-  - if the question leeds to choices then we bifurcate according to choices in action default using current
-  - if just digestion question then we follow with counter through action default
-"""
 
 class ActionDefaultFallback(Action):
     def name(self):
         #return "action_question_counter"
         return 'action_default_fallback'
     def run(self, dispatcher, tracker, domain):
-        #text= tracker.latest_message['text']
-        #interpreter = RasaNLUInterpreter('./models/nlu/default/latest_nlu')
-        #last_intent=interpreter.parse(text)['intent_ranking'][0]
-        
         counter= tracker.get_slot('counter')
         current=tracker.get_slot('current')
         bkind= tracker.get_slot("bkind")
@@ -100,45 +61,11 @@ class ActionDefaultFallback(Action):
         last_message= tracker.latest_message['text']
         last_message= last_message.lower()
         user_name= tracker.get_slot("user_name")
-        names=extract_names(last_message)
-        
-        
         digits=[i for i in re.findall('\d+', last_message )]
-        
-        #num= extract_number(last_message)
         date= next(tracker.get_latest_entity_values("DATE"), None)
-        #years= int(re.findall('\d+', date)[0])/12
-        #dispatcher.utter_message("last entity is DATE:{}".format(years))
         cardinal= next(tracker.get_latest_entity_values("CARDINAL"), None)
-        #dispatcher.utter_message("last entity is CARDINAL:{}".format(cardinal))
-        
-        #intr = RasaNLUInterpreter("./models/nlu/default/latest_nlu")
-        #io=intr.parse(last_message)
-        #for i in range(len(io['entities'])):
-        #  if io['entities'][i]['entity']=='DATE' or io['entities'][i]['entity']=="CARDINAL":
-        #    dispatcher.utter_message(io['entities'][i]['value'])
-
-        #latest_ent= tracker.get_latest_entity_values("DATE")
-        #dispatcher.utter_message(latest_ent)
-        
-        
-        #dispatcher.utter_message(something)
-        
-        #dispatcher.utter_message(last_message)
-        #dispatcher.utter_message(last_intent)
-        #dispatcher.utter_message(current)
-        #dispatcher.utter_message(counter)
-        #dispatcher.utter_message("bkind is:{}".format(bkind))
-        #dispatcher.utter_message("nob is:{}".format(nob))
-        #dispatcher.utter_message(last_message)
-        #dispatcher.utter_message("industry is:{}".format(industry))
-        #dispatcher.utter_message(interview_state)
-        #dispatcher.utter_message("digits:{}".format(digits))
-        #dispatcher.utter_message("names:{}".format(names))
-        #gh=tracker.get_latest_input_channel()
-        #dispatcher.utter_message(gh)
-        #hj=tracker.latest_action_name()
-        #dispatcher.utter_message(hj)
+        dispatcher.utter_message(current)
+        dispatcher.utter_message(counter)
  
         
         #before interview start
@@ -211,6 +138,12 @@ class ActionDefaultFallback(Action):
             #counter="action_stop_check"
             return[FollowupAction("action_stop_check")]
         
+
+          #staring the interview with 12345
+
+          if current=="action_fetch_details":
+            user_name= last_message
+            return[FollowupAction(counter),SlotSet('user_name', user_name) ]  
         
           #stop
           
@@ -230,6 +163,10 @@ class ActionDefaultFallback(Action):
           
           
           #stop interview
+#          if current=="action_fetch_details":
+#            user_name= last_message
+#            return[FollowupAction(counter),SlotSet('user_name', user_name) ]  
+            
           
           if current=="action_stop_check":
             if last_intent== "affirm":
@@ -364,6 +301,7 @@ class ActionFetchDetails(Action):
         user_name = tracker.get_slot('user_name')
         user_cell=tracker.get_slot('user_cell')
         last_message= tracker.latest_message['text']
+          
 
         try:
          n=0
@@ -371,6 +309,10 @@ class ActionFetchDetails(Action):
                 if i in df['applicant_1_phone'].fillna(0).astype(int).astype(str).values.tolist():
                     user_cell=i
                     n+=1
+         if (user_name=="Dear" and user_cell=="12345"):
+                    dispatcher.utter_message("Kindly enter your full name!")
+                    return[FollowupAction('action_listen'),SlotSet('user_cell', user_cell),SlotSet('interview_state', "started"),SlotSet('current', "action_fetch_details"),SlotSet('counter', "action_business_kind")]
+                    
          if n>1:
                     dispatcher.utter_message("more than 1 cell identified!. Please provide only the registered cell number")
                     user_cell='none'
@@ -723,7 +665,7 @@ class ActionIndustryFollowup(Action):
         dispatcher.utter_template("utter_ask_nob", tracker)
         current="action_nob"
         counter= "action_decide_flow"
-        return [SlotSet('current', current),SlotSet('counter', counter),FollowupAction(counter), SlotSet('industry', industry)]
+        return [SlotSet('current', current),SlotSet('counter', counter),FollowupAction("action_listen"), SlotSet('industry', industry)]
     
       
             
@@ -902,7 +844,7 @@ class ActionFootwear4(Action):
         
         else:
           dispatcher.utter_message("Not Understood!")
-          counter= "action_hotel2"
+          counter= "action_footwear3"
           return [SlotSet('current', current),SlotSet('counter', counter),FollowupAction(counter)]
 
 
@@ -997,7 +939,7 @@ class Actionfmcg(Action):
       
       #dispatcher.utter_message("Do you have any product's authorized dealership? Kindly name if any!")
       counter="action_decide_flow"
-      return [SlotSet('current', current),SlotSet('counter', counter),FollowupAction("action_listen")]
+      return [SlotSet('current', current),SlotSet('counter', counter),FollowupAction(counter)]
 
 
 class ActionHotel(Action):
@@ -1364,7 +1306,10 @@ class ActionTrader3(Action):
       last_intent= tracker.latest_message['intent'].get('name')
       last_message= tracker.latest_message['text']
       
-      dispatcher.utter_message("Do you have any authorized dealership of any product? ")
+      #dispatcher.utter_message("Do you have any authorized dealership of any product? ")
+      buttons = [{'title': 'Yes', 'payload': 'yes'}, {'title': 'No', 'payload': 'no'}] 
+      dispatcher.utter_button_message("Do you have any authorized dealership of any product? ", buttons)
+      
       return [SlotSet('counter', counter),FollowupAction("action_listen"),SlotSet('current', current)]
             
 class ActionTrader4(Action):
@@ -1375,8 +1320,34 @@ class ActionTrader4(Action):
       #dispatcher.utter_message("What kind of Trader are you into:\n-Retail\n-Wholesale\n-Both retail and wholesale")
       current="action_trader4"
       counter="action_trader5"
-      last_intent= tracker.latest_message['intent'].get('name')
+      
       last_message= tracker.latest_message['text']
+      
+      last_intent= tracker.latest_message['intent'].get('name')
+        #last_message= tracker.latest_message['text']
+      if last_intent=="affirm":
+        dispatcher.utter_message("Kindly name the products with dealership.")
+        return [SlotSet('current', current),SlotSet('counter', counter),FollowupAction("action_listen")]
+        
+        
+      elif last_intent=="deny":
+        #dispatcher.utter_message("How do you clear the stock?")
+        return [SlotSet('current', current),SlotSet('counter', counter),FollowupAction(counter)]
+        
+      else:
+        dispatcher.utter_message("Not Understood!")
+        counter= "action_trader3"
+        return [SlotSet('current', current),SlotSet('counter', counter),FollowupAction(counter)]
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
       trader_type=tracker.get_slot("trader_type")
         
       if trader_type=="wholesale":
@@ -1767,7 +1738,7 @@ class ActionEMIBounce(Action):
     def name(self):
         return "action_emi_bounce"
     def run(self, dispatcher, tracker, domain):
-      counter="end"
+      counter="action_family"
       current="action_emi_bounce"
 #      emi_bounce=3
       user_cell=tracker.get_slot('user_cell')
@@ -1787,5 +1758,84 @@ class ActionEMIBounce(Action):
        
 
 
+class ActionFamily(Action):
+    
+    def name(self):
+        return "action_family"
+    def run(self, dispatcher, tracker, domain):
+      dispatcher.utter_message("This is the last section. I will ask some family related questions!")
+      dispatcher.utter_message("Where do you stay?")
+      #ActionSave.run('action_save',dispatcher, tracker, domain)
+      counter="action_family2"
+      current="action_family"
+      return [SlotSet('counter', counter),FollowupAction("action_listen"),SlotSet('current', current) ]
+    
+class ActionFamily2(Action):
+    
+    def name(self):
+        return "action_family2"
+    def run(self, dispatcher, tracker, domain):
+      
+      buttons = [{'title': 'Yes I own it', 'payload': 'self'}, {'title': 'No its rented', 'payload': 'rent'},{'title': 'Somebody in family owns it', 'payload': 'family'}] 
+      dispatcher.utter_button_message("Do you own the house you currently stay in?", buttons)
+      
+      
+      #ActionSave.run('action_save',dispatcher, tracker, domain)
+      counter="action_family3"
+      current="action_family2"
+      return [SlotSet('counter', counter),FollowupAction("action_listen"),SlotSet('current', current) ]
 
 
+class ActionFamily3(Action):
+    
+    def name(self):
+        return "action_family3"
+    def run(self, dispatcher, tracker, domain):
+      
+      
+      current= "action_family3"
+      last_intent= tracker.latest_message['intent'].get('name')
+      last_message= tracker.latest_message['text']
+      if (last_message=="self"):
+        dispatcher.utter_message("When did you move in this house?")
+        counter="action_family4"
+        
+        return [SlotSet('current', current),SlotSet('counter', counter),FollowupAction("action_listen")]
+      elif (last_message=="rent"):
+        dispatcher.utter_message("Since when have you been staying in this house?")
+        counter="action_family4"
+        return [SlotSet('current', current),SlotSet('counter', counter),FollowupAction("action_listen")]
+      elif (last_message=="family"):
+        dispatcher.utter_message("Since when have you been staying in this house?")
+        counter="action_family4"
+        return [SlotSet('current', current),SlotSet('counter', counter),FollowupAction("action_listen")]
+      else:
+        dispatcher.utter_message("Not Understood!")
+        counter= "action_family2"
+        return [SlotSet('current', current),SlotSet('counter', counter),FollowupAction(counter)]
+
+
+class ActionFamily4(Action):
+    
+    def name(self):
+        return "action_family4"
+    def run(self, dispatcher, tracker, domain):
+      dispatcher.utter_message("How many members are there in your family?")
+      #dispatcher.utter_message("Where do you stay?")
+      #ActionSave.run('action_save',dispatcher, tracker, domain)
+      counter="action_family5"
+      current="action_family4"
+      return [SlotSet('counter', counter),FollowupAction("action_listen"),SlotSet('current', current) ]
+
+class ActionFamily5(Action):
+    
+    def name(self):
+        return "action_family5"
+    def run(self, dispatcher, tracker, domain):
+      dispatcher.utter_message("Is there any other member of your family who earns from a different source?")
+      #dispatcher.utter_message("Where do you stay?")
+      #ActionSave.run('action_save',dispatcher, tracker, domain)
+      current="action_family5"
+      counter="end"
+      return [SlotSet('counter', counter),FollowupAction("action_listen"),SlotSet('current', current) ]
+        

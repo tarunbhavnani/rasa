@@ -1,0 +1,2501 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "greet",
+        "text": "Hi"
+      },
+      {
+        "intent": "greet",
+        "text": "Hey"
+      },
+      {
+        "intent": "greet",
+        "text": "Hi bot"
+      },
+      {
+        "intent": "greet",
+        "text": "Hey bot"
+      },
+      {
+        "intent": "greet",
+        "text": "Hello"
+      },
+      {
+        "intent": "greet",
+        "text": "Good morning"
+      },
+      {
+        "intent": "greet",
+        "text": "hi again"
+      },
+      {
+        "intent": "greet",
+        "text": "hi folks"
+      },
+      {
+        "intent": "greet",
+        "text": "hi Mister"
+      },
+      {
+        "intent": "greet",
+        "text": "hi pal!"
+      },
+      {
+        "intent": "greet",
+        "text": "hi there"
+      },
+      {
+        "intent": "greet",
+        "text": "greetings"
+      },
+      {
+        "intent": "greet",
+        "text": "hello"
+      },
+      {
+        "intent": "greet",
+        "text": "hello robot"
+      },
+      {
+        "intent": "greet",
+        "text": "hey robot"
+      },
+      {
+        "intent": "greet",
+        "text": "heyy"
+      },
+      {
+        "intent": "greet",
+        "text": "namaste"
+      },
+      {
+        "intent": "greet",
+        "text": "namskar"
+      },
+      {
+        "intent": "greet",
+        "text": "namaskaar"
+      },
+      {
+        "intent": "greet",
+        "text": "naamaste"
+      },
+      {
+        "intent": "chitchat",
+        "text": "None of your business"
+      },
+      {
+        "intent": "chitchat",
+        "text": "chup kar"
+      },
+      {
+        "intent": "chitchat",
+        "text": "fuck off"
+      },
+      {
+        "intent": "chitchat",
+        "text": "fuckoff"
+      },
+      {
+        "intent": "chitchat",
+        "text": "abc"
+      },
+      {
+        "intent": "chitchat",
+        "text": "what do you mean"
+      },
+      {
+        "intent": "stop",
+        "text": "stop"
+      },
+      {
+        "intent": "outsource",
+        "text": "outsource"
+      },
+      {
+        "intent": "outsource",
+        "text": "out sourced"
+      },
+      {
+        "intent": "outsource",
+        "text": "outsrcd"
+      },
+      {
+        "intent": "outsource",
+        "text": "out"
+      },
+      {
+        "intent": "inhouse",
+        "text": "in"
+      },
+      {
+        "intent": "inhouse",
+        "text": "inhouse"
+      },
+      {
+        "intent": "inhouse",
+        "text": "inhs"
+      },
+      {
+        "intent": "goodbye",
+        "text": "goodbye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "bye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "bye bye"
+      },
+      {
+        "intent": "thank",
+        "text": "Thanks"
+      },
+      {
+        "intent": "thank",
+        "text": "Thank you"
+      },
+      {
+        "intent": "thank",
+        "text": "Thank you"
+      },
+      {
+        "intent": "thank",
+        "text": "Thanks bot"
+      },
+      {
+        "intent": "thank",
+        "text": "Thanks for that"
+      },
+      {
+        "intent": "thank",
+        "text": "cheers"
+      },
+      {
+        "intent": "thank",
+        "text": "cheers bro"
+      },
+      {
+        "intent": "thank",
+        "text": "ok thanks!"
+      },
+      {
+        "intent": "thank",
+        "text": "shukria"
+      },
+      {
+        "intent": "thank",
+        "text": "dhanyawad"
+      },
+      {
+        "intent": "thank",
+        "text": "dhanyawaad"
+      },
+      {
+        "intent": "thank",
+        "text": "sukriya"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes"
+      },
+      {
+        "intent": "affirm",
+        "text": "yepp"
+      },
+      {
+        "intent": "affirm",
+        "text": "yepp"
+      },
+      {
+        "intent": "affirm",
+        "text": "yuss"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes sure"
+      },
+      {
+        "intent": "affirm",
+        "text": "absolutely"
+      },
+      {
+        "intent": "affirm",
+        "text": "for sure"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes yes yes"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes"
+      },
+      {
+        "intent": "affirm",
+        "text": "yepp"
+      },
+      {
+        "intent": "affirm",
+        "text": "yeah"
+      },
+      {
+        "intent": "affirm",
+        "text": "yepp"
+      },
+      {
+        "intent": "affirm",
+        "text": "haa"
+      },
+      {
+        "intent": "affirm",
+        "text": "haan"
+      },
+      {
+        "intent": "affirm",
+        "text": "haanji"
+      },
+      {
+        "intent": "affirm",
+        "text": "bilkul"
+      },
+      {
+        "intent": "affirm",
+        "text": "sahi baat"
+      },
+      {
+        "intent": "affirm",
+        "text": "aji haa"
+      },
+      {
+        "intent": "affirm",
+        "text": "jii haan"
+      },
+      {
+        "intent": "affirm",
+        "text": "ji haa"
+      },
+      {
+        "intent": "inform",
+        "text": "7838930304"
+      },
+      {
+        "intent": "inform",
+        "text": "9414485068"
+      },
+      {
+        "intent": "inform",
+        "text": "my number is 9489785068"
+      },
+      {
+        "intent": "inform",
+        "text": "its 9834367345"
+      },
+      {
+        "intent": "inform",
+        "text": "my reference number is 9414904068"
+      },
+      {
+        "intent": "inform",
+        "text": "my number is 8967556347"
+      },
+      {
+        "intent": "inform",
+        "text": "7878450304"
+      },
+      {
+        "intent": "inform",
+        "text": "9419056068"
+      },
+      {
+        "intent": "inform",
+        "text": "my number is 9414485968"
+      },
+      {
+        "intent": "inform",
+        "text": "its 8765167345"
+      },
+      {
+        "intent": "inform",
+        "text": "my reference number is 9445673468"
+      },
+      {
+        "intent": "inform",
+        "text": "my number is 8967556347"
+      },
+      {
+        "intent": "inform",
+        "text": "7838930304"
+      },
+      {
+        "intent": "inform",
+        "text": "9414485068"
+      },
+      {
+        "intent": "inform",
+        "text": "my number is 941263958"
+      },
+      {
+        "intent": "inform",
+        "text": "its 9841737345"
+      },
+      {
+        "intent": "inform",
+        "text": "my reference number is 9419985068"
+      },
+      {
+        "intent": "inform",
+        "text": "my number is 8967616347"
+      },
+      {
+        "intent": "inform",
+        "text": "my id is 9414077395"
+      },
+      {
+        "intent": "inform",
+        "text": "its 7838930304"
+      },
+      {
+        "intent": "inform",
+        "text": "i am from kota"
+      },
+      {
+        "intent": "inform",
+        "text": "father mother sister her husband a nephew and my girlfriend"
+      },
+      {
+        "intent": "inform",
+        "text": "yaa he advises me on things"
+      },
+      {
+        "intent": "inform",
+        "text": "my office is in ghatkopar"
+      },
+      {
+        "intent": "inform",
+        "text": "yes we have around 30 employees."
+      },
+      {
+        "intent": "inform",
+        "text": "we have been here for the last 6 months."
+      },
+      {
+        "intent": "inform",
+        "text": "we have a clothes shop. my wife is the fashion designer i market them"
+      },
+      {
+        "intent": "inform",
+        "text": "i stay in worli"
+      },
+      {
+        "intent": "inform",
+        "text": "i live in dadar"
+      },
+      {
+        "intent": "inform",
+        "text": "my house is in panvel"
+      },
+      {
+        "intent": "inform",
+        "text": "i stay in rajasthan"
+      },
+      {
+        "intent": "inform",
+        "text": "mumbai"
+      },
+      {
+        "intent": "inform",
+        "text": "ahemadabad"
+      },
+      {
+        "intent": "inform",
+        "text": "gujrat"
+      },
+      {
+        "intent": "inform",
+        "text": "i stay in worli"
+      },
+      {
+        "intent": "inform",
+        "text": "i live in dadar"
+      },
+      {
+        "intent": "inform",
+        "text": "my house is in panvel"
+      },
+      {
+        "intent": "inform",
+        "text": "i stay in rajasthan"
+      },
+      {
+        "intent": "inform",
+        "text": "mumbai"
+      },
+      {
+        "intent": "inform",
+        "text": "ahemadabad"
+      },
+      {
+        "intent": "inform",
+        "text": "gujrat- i stay in worli"
+      },
+      {
+        "intent": "inform",
+        "text": "i live in dadar"
+      },
+      {
+        "intent": "inform",
+        "text": "my house is in panvel"
+      },
+      {
+        "intent": "inform",
+        "text": "i stay in rajasthan"
+      },
+      {
+        "intent": "inform",
+        "text": "mumbai"
+      },
+      {
+        "intent": "inform",
+        "text": "ahemadabad"
+      },
+      {
+        "intent": "inform",
+        "text": "gujrat"
+      },
+      {
+        "intent": "inform",
+        "text": "i stay in Palava"
+      },
+      {
+        "intent": "inform",
+        "text": "3"
+      },
+      {
+        "intent": "inform",
+        "text": "4"
+      },
+      {
+        "intent": "inform",
+        "text": "102"
+      },
+      {
+        "intent": "inform",
+        "text": "33"
+      },
+      {
+        "intent": "inform",
+        "text": "24"
+      },
+      {
+        "intent": "inform",
+        "text": "500"
+      },
+      {
+        "intent": "inform",
+        "text": "worli"
+      },
+      {
+        "intent": "inform",
+        "text": "dadar"
+      },
+      {
+        "intent": "inform",
+        "text": "say"
+      },
+      {
+        "intent": "inform",
+        "text": "what"
+      },
+      {
+        "intent": "inform",
+        "text": "can you?"
+      },
+      {
+        "intent": "inform",
+        "text": "there are 4 members in my family. My parents my sister and myself."
+      },
+      {
+        "intent": "inform",
+        "text": "my parents and one sister"
+      },
+      {
+        "intent": "inform",
+        "text": "parents and two brothers"
+      },
+      {
+        "intent": "inform",
+        "text": "5 members in the family"
+      },
+      {
+        "intent": "inform",
+        "text": "wife and three children"
+      },
+      {
+        "intent": "inform",
+        "text": "three members"
+      },
+      {
+        "intent": "inform",
+        "text": "ihave 6 members in my family"
+      },
+      {
+        "intent": "inform",
+        "text": "there are 5 members in my family."
+      },
+      {
+        "intent": "inform",
+        "text": "my brothers are also involved in the business"
+      },
+      {
+        "intent": "inform",
+        "text": "one of my brother manages some work"
+      },
+      {
+        "intent": "inform",
+        "text": "yes he handles the finances and i handle the daily mamagement."
+      },
+      {
+        "intent": "inform",
+        "text": "yaa he manages the daily affairs sits on shop."
+      },
+      {
+        "intent": "inform",
+        "text": "by father helps me alot somethimes my cousins also chip in"
+      },
+      {
+        "intent": "inform",
+        "text": "its located in prabhadevi"
+      },
+      {
+        "intent": "inform",
+        "text": "i have 10 employees"
+      },
+      {
+        "intent": "inform",
+        "text": "9975701240"
+      },
+      {
+        "intent": "inform",
+        "text": "in colaba"
+      },
+      {
+        "intent": "inform",
+        "text": "three"
+      },
+      {
+        "intent": "inform",
+        "text": "we make fools out of people"
+      },
+      {
+        "intent": "inform",
+        "text": "its in malabar"
+      },
+      {
+        "intent": "inform",
+        "text": "we have 125 cr employees but we work with some lacks"
+      },
+      {
+        "intent": "inform",
+        "text": "since last 3 months"
+      },
+      {
+        "intent": "inform",
+        "text": "last 300 years"
+      },
+      {
+        "intent": "inform",
+        "text": "its 7838930304"
+      },
+      {
+        "intent": "inform",
+        "text": "i stay in gharkopar"
+      },
+      {
+        "intent": "inform",
+        "text": "i have one sister and my parents. sister is married stays in holland"
+      },
+      {
+        "intent": "inform",
+        "text": "yes we make carpets and export it to the US"
+      },
+      {
+        "intent": "inform",
+        "text": "its in marol"
+      },
+      {
+        "intent": "inform",
+        "text": "yes i havbe 45 emplyees. all of them are on wages."
+      },
+      {
+        "intent": "inform",
+        "text": "its been 10 years now."
+      },
+      {
+        "intent": "inform",
+        "text": "we have been in this one for the last 25 months."
+      },
+      {
+        "intent": "inform",
+        "text": "1 cr"
+      },
+      {
+        "intent": "inform",
+        "text": "crossed 1 cr already."
+      },
+      {
+        "intent": "inform",
+        "text": "7838930304"
+      },
+      {
+        "intent": "inform",
+        "text": "9414485068"
+      },
+      {
+        "intent": "inform",
+        "text": "my number is 9489785068"
+      },
+      {
+        "intent": "inform",
+        "text": "its 9834367345"
+      },
+      {
+        "intent": "inform",
+        "text": "my reference number is 9414904068"
+      },
+      {
+        "intent": "inform",
+        "text": "my number is 8967556347"
+      },
+      {
+        "intent": "inform",
+        "text": "7878450304"
+      },
+      {
+        "intent": "inform",
+        "text": "9419056068"
+      },
+      {
+        "intent": "inform",
+        "text": "my number is 9414485968"
+      },
+      {
+        "intent": "inform",
+        "text": "its 8765167345"
+      },
+      {
+        "intent": "inform",
+        "text": "my reference number is 9445673468"
+      },
+      {
+        "intent": "inform",
+        "text": "my number is 8967556347"
+      },
+      {
+        "intent": "inform",
+        "text": "7838930304"
+      },
+      {
+        "intent": "inform",
+        "text": "9414485068"
+      },
+      {
+        "intent": "inform",
+        "text": "my number is 941263958"
+      },
+      {
+        "intent": "inform",
+        "text": "its 9841737345"
+      },
+      {
+        "intent": "inform",
+        "text": "my reference number is 9419985068"
+      },
+      {
+        "intent": "inform",
+        "text": "my number is 8967616347"
+      },
+      {
+        "intent": "inform",
+        "text": "my id is 9414077395"
+      },
+      {
+        "intent": "inform",
+        "text": "its 7838930304"
+      },
+      {
+        "intent": "inform",
+        "text": "i am from kota"
+      },
+      {
+        "intent": "inform",
+        "text": "father mother sister her husband a nephew and my girlfriend"
+      },
+      {
+        "intent": "inform",
+        "text": "yaa he advises me on things"
+      },
+      {
+        "intent": "inform",
+        "text": "my office is in ghatkopar"
+      },
+      {
+        "intent": "inform",
+        "text": "yes we have around 30 employees."
+      },
+      {
+        "intent": "inform",
+        "text": "we have been here for the last 6."
+      },
+      {
+        "intent": "inform",
+        "text": "we have a clothes shop. my wife is the fashion designer i market them"
+      },
+      {
+        "intent": "inform",
+        "text": "i stay in worli"
+      },
+      {
+        "intent": "inform",
+        "text": "i live in dadar"
+      },
+      {
+        "intent": "inform",
+        "text": "my house is in panvel"
+      },
+      {
+        "intent": "inform",
+        "text": "i stay in rajasthan"
+      },
+      {
+        "intent": "inform",
+        "text": "mumbai"
+      },
+      {
+        "intent": "inform",
+        "text": "ahemadabad"
+      },
+      {
+        "intent": "inform",
+        "text": "gujrat"
+      },
+      {
+        "intent": "inform",
+        "text": "i stay in worli"
+      },
+      {
+        "intent": "inform",
+        "text": "i live in dadar"
+      },
+      {
+        "intent": "inform",
+        "text": "my house is in panvel"
+      },
+      {
+        "intent": "inform",
+        "text": "i stay in rajasthan"
+      },
+      {
+        "intent": "inform",
+        "text": "mumbai"
+      },
+      {
+        "intent": "inform",
+        "text": "ahemadabad"
+      },
+      {
+        "intent": "inform",
+        "text": "gujrat- i stay in worli"
+      },
+      {
+        "intent": "inform",
+        "text": "i live in dadar"
+      },
+      {
+        "intent": "inform",
+        "text": "my house is in panvel"
+      },
+      {
+        "intent": "inform",
+        "text": "i stay in rajasthan"
+      },
+      {
+        "intent": "inform",
+        "text": "mumbai"
+      },
+      {
+        "intent": "inform",
+        "text": "ahemadabad"
+      },
+      {
+        "intent": "inform",
+        "text": "gujrat"
+      },
+      {
+        "intent": "inform",
+        "text": "i stay in Palava"
+      },
+      {
+        "intent": "inform",
+        "text": "3"
+      },
+      {
+        "intent": "inform",
+        "text": "4"
+      },
+      {
+        "intent": "inform",
+        "text": "102"
+      },
+      {
+        "intent": "inform",
+        "text": "33"
+      },
+      {
+        "intent": "inform",
+        "text": "24"
+      },
+      {
+        "intent": "inform",
+        "text": "500"
+      },
+      {
+        "intent": "inform",
+        "text": "worli"
+      },
+      {
+        "intent": "inform",
+        "text": "dadar"
+      },
+      {
+        "intent": "inform",
+        "text": "say"
+      },
+      {
+        "intent": "inform",
+        "text": "what"
+      },
+      {
+        "intent": "inform",
+        "text": "can you?"
+      },
+      {
+        "intent": "inform",
+        "text": "there are 4 members in my family. My parents my sister and myself."
+      },
+      {
+        "intent": "inform",
+        "text": "my parents and one sister"
+      },
+      {
+        "intent": "inform",
+        "text": "parents and two brothers"
+      },
+      {
+        "intent": "inform",
+        "text": "5 members in the family"
+      },
+      {
+        "intent": "inform",
+        "text": "wife and three children"
+      },
+      {
+        "intent": "inform",
+        "text": "three members"
+      },
+      {
+        "intent": "inform",
+        "text": "ihave 6 members in my family"
+      },
+      {
+        "intent": "inform",
+        "text": "there are 5 members in my family."
+      },
+      {
+        "intent": "inform",
+        "text": "my brothers are also involved in the business"
+      },
+      {
+        "intent": "inform",
+        "text": "one of my brother manages some work"
+      },
+      {
+        "intent": "inform",
+        "text": "yes he handles the finances and i handle the daily mamagement."
+      },
+      {
+        "intent": "inform",
+        "text": "yaa he manages the daily affairs sits on shop."
+      },
+      {
+        "intent": "inform",
+        "text": "by father helps me alot somethimes my cousins also chip in"
+      },
+      {
+        "intent": "inform",
+        "text": "its located in prabhadevi"
+      },
+      {
+        "intent": "inform",
+        "text": "i have 10 employees"
+      },
+      {
+        "intent": "inform",
+        "text": "9975701240"
+      },
+      {
+        "intent": "inform",
+        "text": "in colaba"
+      },
+      {
+        "intent": "inform",
+        "text": "three"
+      },
+      {
+        "intent": "inform",
+        "text": "we make fools out of people"
+      },
+      {
+        "intent": "inform",
+        "text": "its in malabar"
+      },
+      {
+        "intent": "inform",
+        "text": "we have 125 cr employees but we work with some lacks"
+      },
+      {
+        "intent": "inform",
+        "text": "since last 3"
+      },
+      {
+        "intent": "inform",
+        "text": "last 300"
+      },
+      {
+        "intent": "inform",
+        "text": "its 7838930304"
+      },
+      {
+        "intent": "inform",
+        "text": "i stay in gharkopar"
+      },
+      {
+        "intent": "inform",
+        "text": "i have one sister and my parents. sister is married stays in holland"
+      },
+      {
+        "intent": "inform",
+        "text": "yes we make carpets and export it to the US"
+      },
+      {
+        "intent": "inform",
+        "text": "its in marol"
+      },
+      {
+        "intent": "inform",
+        "text": "yes i havbe 45 emplyees. all of them are on wages."
+      },
+      {
+        "intent": "inform",
+        "text": "its been 10 now."
+      },
+      {
+        "intent": "inform",
+        "text": "we have been in this one for the last 25."
+      },
+      {
+        "intent": "inform",
+        "text": "1"
+      },
+      {
+        "intent": "inform",
+        "text": "crossed 1 already."
+      },
+      {
+        "intent": "inform",
+        "text": "its 7838930304"
+      },
+      {
+        "intent": "inform",
+        "text": "this this is the dirsctor and this this is the shareholding pattern"
+      },
+      {
+        "intent": "inform",
+        "text": "its been 13"
+      },
+      {
+        "intent": "inform",
+        "text": "its in haryana"
+      },
+      {
+        "intent": "inform",
+        "text": "we have 3 machines"
+      },
+      {
+        "intent": "inform",
+        "text": "2000 tonnes and 70 pc"
+      },
+      {
+        "intent": "inform",
+        "text": "67 workers in total"
+      },
+      {
+        "intent": "inform",
+        "text": "3 parties abc, dfg and xcw."
+      },
+      {
+        "intent": "inform",
+        "text": "we give in 30 days"
+      },
+      {
+        "intent": "inform",
+        "text": "have to pay 30 cr in market"
+      },
+      {
+        "intent": "inform",
+        "text": "some what two months"
+      },
+      {
+        "intent": "inform",
+        "text": "in bhiwandi close to the main factory. its owned."
+      },
+      {
+        "intent": "inform",
+        "text": "yes there are numerous custiomers."
+      },
+      {
+        "intent": "inform",
+        "text": "around 60 days"
+      },
+      {
+        "intent": "inform",
+        "text": "have to receive some 40 cr"
+      },
+      {
+        "intent": "inform",
+        "text": "some 3 cr"
+      },
+      {
+        "intent": "inform",
+        "text": "around 50 cr"
+      },
+      {
+        "intent": "inform",
+        "text": "mostly in bank after gst."
+      },
+      {
+        "intent": "inform",
+        "text": "13 pc"
+      },
+      {
+        "intent": "inform",
+        "text": "67 emplyees"
+      },
+      {
+        "intent": "inform",
+        "text": "we r in the 4 pc bracket"
+      },
+      {
+        "intent": "inform",
+        "text": "for 3 cr"
+      },
+      {
+        "intent": "inform",
+        "text": "planning to start a new unit at manesar."
+      },
+      {
+        "intent": "inform",
+        "text": "i have x y and z parties and they have w,e,r sharehiolding"
+      },
+      {
+        "intent": "inform",
+        "text": "13 years till now"
+      },
+      {
+        "intent": "inform",
+        "text": "retail"
+      },
+      {
+        "intent": "inform",
+        "text": "stockist"
+      },
+      {
+        "intent": "inform",
+        "text": "there are these three parties i purchase from"
+      },
+      {
+        "intent": "inform",
+        "text": "three months"
+      },
+      {
+        "intent": "inform",
+        "text": "3.4 cr"
+      },
+      {
+        "intent": "inform",
+        "text": "its near the locations"
+      },
+      {
+        "intent": "inform",
+        "text": "i am a retialer."
+      },
+      {
+        "intent": "inform",
+        "text": "its 90 days."
+      },
+      {
+        "intent": "inform",
+        "text": "2.3 cr"
+      },
+      {
+        "intent": "inform",
+        "text": "30 cr pm"
+      },
+      {
+        "intent": "inform",
+        "text": "3"
+      },
+      {
+        "intent": "inform",
+        "text": "90 pc"
+      },
+      {
+        "intent": "inform",
+        "text": "28 pc"
+      },
+      {
+        "intent": "inform",
+        "text": "78 employess"
+      },
+      {
+        "intent": "inform",
+        "text": "14 pc"
+      },
+      {
+        "intent": "inform",
+        "text": "30 lacks"
+      },
+      {
+        "intent": "inform",
+        "text": "to increase productiopn."
+      },
+      {
+        "intent": "inform",
+        "text": "it is 7838930304"
+      },
+      {
+        "intent": "inform",
+        "text": "private"
+      },
+      {
+        "intent": "inform",
+        "text": "mahesh majrekra and sanjay gupta. all three of us have 33 pc each."
+      },
+      {
+        "intent": "inform",
+        "text": "its been 13 years"
+      },
+      {
+        "intent": "inform",
+        "text": "groceries"
+      },
+      {
+        "intent": "inform",
+        "text": "retail"
+      },
+      {
+        "intent": "inform",
+        "text": "stockist"
+      },
+      {
+        "intent": "inform",
+        "text": "i purchase from three parties, this this ans this"
+      },
+      {
+        "intent": "inform",
+        "text": "we receive the payments in 45 days"
+      },
+      {
+        "intent": "inform",
+        "text": "some 30"
+      },
+      {
+        "intent": "inform",
+        "text": "we have stocks for 30 days"
+      },
+      {
+        "intent": "inform",
+        "text": "its is near factory"
+      },
+      {
+        "intent": "inform",
+        "text": "we sell to 4 parties, this this and ths"
+      },
+      {
+        "intent": "inform",
+        "text": "90 days"
+      },
+      {
+        "intent": "inform",
+        "text": "we have to receive some 3 lacks from the debtors"
+      },
+      {
+        "intent": "inform",
+        "text": "we do some 13 lacks"
+      },
+      {
+        "intent": "inform",
+        "text": "its around 2.5 cr"
+      },
+      {
+        "intent": "inform",
+        "text": "its about 78%"
+      },
+      {
+        "intent": "inform",
+        "text": "23 pc"
+      },
+      {
+        "intent": "inform",
+        "text": "we have 45 emplyees"
+      },
+      {
+        "intent": "inform",
+        "text": "they are 18 pc"
+      },
+      {
+        "intent": "inform",
+        "text": "8 cr"
+      },
+      {
+        "intent": "inform",
+        "text": "we have to put one new unit."
+      },
+      {
+        "intent": "inform",
+        "text": "it is 7838930304"
+      },
+      {
+        "intent": "inform",
+        "text": "mahesh majrekra and sanjay gupta. all three of us have 33 pc each."
+      },
+      {
+        "intent": "inform",
+        "text": "its been 13 years"
+      },
+      {
+        "intent": "inform",
+        "text": "groceries"
+      },
+      {
+        "intent": "inform",
+        "text": "retail"
+      },
+      {
+        "intent": "inform",
+        "text": "stockist"
+      },
+      {
+        "intent": "inform",
+        "text": "i purchase from three parties, this this ans this"
+      },
+      {
+        "intent": "inform",
+        "text": "we receive the payments in 45 days"
+      },
+      {
+        "intent": "inform",
+        "text": "some 30"
+      },
+      {
+        "intent": "inform",
+        "text": "we have stocks for 30 days"
+      },
+      {
+        "intent": "inform",
+        "text": "its is near factory"
+      },
+      {
+        "intent": "inform",
+        "text": "we sell to 4 parties, this this and ths"
+      },
+      {
+        "intent": "inform",
+        "text": "90 days"
+      },
+      {
+        "intent": "inform",
+        "text": "we have to receive some 3 lac from the debtors"
+      },
+      {
+        "intent": "inform",
+        "text": "we do some 13 lacks"
+      },
+      {
+        "intent": "inform",
+        "text": "its around 2.5 cr"
+      },
+      {
+        "intent": "inform",
+        "text": "its about 78 %"
+      },
+      {
+        "intent": "inform",
+        "text": "23 pc"
+      },
+      {
+        "intent": "inform",
+        "text": "we have 45 emplyees"
+      },
+      {
+        "intent": "inform",
+        "text": "they are 18 pc"
+      },
+      {
+        "intent": "inform",
+        "text": "8"
+      },
+      {
+        "intent": "inform",
+        "text": "we have to put one new unit."
+      },
+      {
+        "intent": "inform",
+        "text": "its 7838930304"
+      },
+      {
+        "intent": "inform",
+        "text": "its have been 12"
+      },
+      {
+        "intent": "inform",
+        "text": "i ahve been in this business since forever. worked with my father before."
+      },
+      {
+        "intent": "inform",
+        "text": "textiles"
+      },
+      {
+        "intent": "inform",
+        "text": "its in jabalpur, near bedaghat."
+      },
+      {
+        "intent": "inform",
+        "text": "we have some staff there, i also vist sometimes a month."
+      },
+      {
+        "intent": "inform",
+        "text": "we have some 23 machines"
+      },
+      {
+        "intent": "inform",
+        "text": "67 workers are there."
+      },
+      {
+        "intent": "inform",
+        "text": "50k"
+      },
+      {
+        "intent": "inform",
+        "text": "100k"
+      },
+      {
+        "intent": "inform",
+        "text": "20k"
+      },
+      {
+        "intent": "inform",
+        "text": "50 k"
+      },
+      {
+        "intent": "inform",
+        "text": "20 k"
+      },
+      {
+        "intent": "inform",
+        "text": "lacw"
+      },
+      {
+        "intent": "inform",
+        "text": "20 lacws"
+      },
+      {
+        "intent": "inform",
+        "text": "wip"
+      },
+      {
+        "intent": "inform",
+        "text": "it is wip"
+      },
+      {
+        "intent": "inform",
+        "text": "month"
+      },
+      {
+        "intent": "inform",
+        "text": "month or two"
+      },
+      {
+        "intent": "inform",
+        "text": "three months"
+      },
+      {
+        "intent": "inform",
+        "text": "year and beyond"
+      },
+      {
+        "intent": "inform",
+        "text": "we have a capacity of 23 yarns per day and we utilize all of it."
+      },
+      {
+        "intent": "inform",
+        "text": "we purchase raw materials from welspun."
+      },
+      {
+        "intent": "inform",
+        "text": "we pay in 90"
+      },
+      {
+        "intent": "inform",
+        "text": "we have to pay some 34 to welspun"
+      },
+      {
+        "intent": "inform",
+        "text": "we have stock for 120 days at any point in time."
+      },
+      {
+        "intent": "inform",
+        "text": "we sell to lots of retailers across india."
+      },
+      {
+        "intent": "inform",
+        "text": "we offer a credit period of 45. days"
+      },
+      {
+        "intent": "inform",
+        "text": "very samll amount is outstanding. we receive payments on time."
+      },
+      {
+        "intent": "inform",
+        "text": "we sell about 25 worth of goods every month."
+      },
+      {
+        "intent": "inform",
+        "text": "we have done some 4 and are expecting to finish year on 6+cr"
+      },
+      {
+        "intent": "inform",
+        "text": "not more than 20 pc"
+      },
+      {
+        "intent": "inform",
+        "text": "we work on around 18 pc returns"
+      },
+      {
+        "intent": "inform",
+        "text": "total 67 employees"
+      },
+      {
+        "intent": "inform",
+        "text": "18 pc"
+      },
+      {
+        "intent": "inform",
+        "text": "35 lacks"
+      },
+      {
+        "intent": "inform",
+        "text": "i want to start another manufacture unit."
+      },
+      {
+        "intent": "inform",
+        "text": "clothes"
+      },
+      {
+        "intent": "inform",
+        "text": "cloth"
+      },
+      {
+        "intent": "inform",
+        "text": "textile"
+      },
+      {
+        "intent": "inform",
+        "text": "1"
+      },
+      {
+        "intent": "inform",
+        "text": "2"
+      },
+      {
+        "intent": "inform",
+        "text": "3"
+      },
+      {
+        "intent": "inform",
+        "text": "4"
+      },
+      {
+        "intent": "inform",
+        "text": "5"
+      },
+      {
+        "intent": "inform",
+        "text": "6"
+      },
+      {
+        "intent": "inform",
+        "text": "7"
+      },
+      {
+        "intent": "inform",
+        "text": "8"
+      },
+      {
+        "intent": "inform",
+        "text": "9"
+      },
+      {
+        "intent": "inform",
+        "text": "10"
+      },
+      {
+        "intent": "inform",
+        "text": "something"
+      },
+      {
+        "intent": "inform",
+        "text": "this and this"
+      },
+      {
+        "intent": "inform",
+        "text": "was studying"
+      },
+      {
+        "intent": "inform",
+        "text": "1pc"
+      },
+      {
+        "intent": "inform",
+        "text": "12cr"
+      },
+      {
+        "intent": "inform",
+        "text": "12pc"
+      },
+      {
+        "intent": "inform",
+        "text": "19pc"
+      },
+      {
+        "intent": "inform",
+        "text": "fun"
+      },
+      {
+        "intent": "inform",
+        "text": "somehow"
+      },
+      {
+        "intent": "inform",
+        "text": "new nothing"
+      },
+      {
+        "intent": "inform",
+        "text": "here and there"
+      },
+      {
+        "intent": "inform",
+        "text": "thane"
+      },
+      {
+        "intent": "inform",
+        "text": "chichpokli"
+      },
+      {
+        "intent": "inform",
+        "text": "varanasi"
+      },
+      {
+        "intent": "inform",
+        "text": "jabalputr"
+      },
+      {
+        "intent": "inform",
+        "text": "lokhandwala"
+      },
+      {
+        "intent": "inform",
+        "text": "vadala"
+      },
+      {
+        "intent": "inform",
+        "text": "andheri"
+      },
+      {
+        "intent": "inform",
+        "text": "ahemedabad"
+      },
+      {
+        "intent": "inform",
+        "text": "fmcg"
+      },
+      {
+        "intent": "inform",
+        "text": "fmcg"
+      },
+      {
+        "intent": "inform",
+        "text": "fmcg"
+      },
+      {
+        "intent": "inform",
+        "text": "textile"
+      },
+      {
+        "intent": "inform",
+        "text": "clothe"
+      },
+      {
+        "intent": "inform",
+        "text": "clothes"
+      },
+      {
+        "intent": "inform",
+        "text": "electronics goods"
+      },
+      {
+        "intent": "inform",
+        "text": "electonic"
+      },
+      {
+        "intent": "inform",
+        "text": "vegetables"
+      },
+      {
+        "intent": "inform",
+        "text": "paint"
+      },
+      {
+        "intent": "inform",
+        "text": "stone"
+      },
+      {
+        "intent": "inform",
+        "text": "marble"
+      },
+      {
+        "intent": "inform",
+        "text": "paper mill"
+      },
+      {
+        "intent": "inform",
+        "text": "groceries"
+      },
+      {
+        "intent": "inform",
+        "text": "56 lacw"
+      },
+      {
+        "intent": "inform",
+        "text": "flipkart"
+      },
+      {
+        "intent": "inform",
+        "text": "mai worli me rehta hu"
+      },
+      {
+        "intent": "inform",
+        "text": "mai kolaba me rehta hu"
+      },
+      {
+        "intent": "inform",
+        "text": "mera ghar lohandwala me hai"
+      },
+      {
+        "intent": "inform",
+        "text": "mere mata pita or behen k saath rehta hu"
+      },
+      {
+        "intent": "inform",
+        "text": "meri wife or bacchon k saath rehta hu"
+      },
+      {
+        "intent": "inform",
+        "text": "mera poora pariwar saath me worli me rehta hai"
+      },
+      {
+        "intent": "inform",
+        "text": "89pc"
+      },
+      {
+        "intent": "inform",
+        "text": "14pc"
+      },
+      {
+        "intent": "inform",
+        "text": "10pc"
+      },
+      {
+        "intent": "inform",
+        "text": "9414060767"
+      },
+      {
+        "intent": "inform",
+        "text": "ya mr dash dash and mr gdash gdash are the partners along with me. we have equal shares"
+      },
+      {
+        "intent": "inform",
+        "text": "we have been here for some seven and a half years"
+      },
+      {
+        "intent": "inform",
+        "text": "electronics"
+      },
+      {
+        "intent": "inform",
+        "text": "its in gujrat"
+      },
+      {
+        "intent": "inform",
+        "text": "one of us visits evrey week"
+      },
+      {
+        "intent": "inform",
+        "text": "one machine we haveits a big one"
+      },
+      {
+        "intent": "inform",
+        "text": "three ppl handle the one machine"
+      },
+      {
+        "intent": "inform",
+        "text": "its can produce 300 gadgets per day and we use it all"
+      },
+      {
+        "intent": "inform",
+        "text": "we buy raw material from the port in gujrat"
+      },
+      {
+        "intent": "inform",
+        "text": "we pay in 90 days"
+      },
+      {
+        "intent": "inform",
+        "text": "we have to pay some 34 lacks to our creditors on the book"
+      },
+      {
+        "intent": "inform",
+        "text": "for about a month"
+      },
+      {
+        "intent": "inform",
+        "text": "we sell our products in all of north india. Delhi is tghe major buyer."
+      },
+      {
+        "intent": "inform",
+        "text": "we offer payment terms of 45 days not anything more"
+      },
+      {
+        "intent": "inform",
+        "text": "receivables are noth of a crore"
+      },
+      {
+        "intent": "inform",
+        "text": "aroubd 30 lacks"
+      },
+      {
+        "intent": "inform",
+        "text": "we have done some 3.5 cr till now and are planning to touch 7 cr by the end of this year"
+      },
+      {
+        "intent": "inform",
+        "text": "about 75 pc"
+      },
+      {
+        "intent": "inform",
+        "text": "we work on 25 pc margins, at the least."
+      },
+      {
+        "intent": "inform",
+        "text": "12"
+      },
+      {
+        "intent": "inform",
+        "text": "14pc"
+      },
+      {
+        "intent": "inform",
+        "text": "aroubd 25 lacks"
+      },
+      {
+        "intent": "inform",
+        "text": "will set up a new machine"
+      },
+      {
+        "intent": "inform",
+        "text": "7737518038"
+      },
+      {
+        "intent": "inform",
+        "text": "i qon 20 pc shares"
+      },
+      {
+        "intent": "inform",
+        "text": "the company got incorporated in 1999"
+      },
+      {
+        "intent": "inform",
+        "text": "we are into cements"
+      },
+      {
+        "intent": "inform",
+        "text": "the unit is in bihar"
+      },
+      {
+        "intent": "inform",
+        "text": "there is a big work force abnd manager at the site they manage and report to em"
+      },
+      {
+        "intent": "inform",
+        "text": "its a big plants and many machines"
+      },
+      {
+        "intent": "inform",
+        "text": "230 orkers"
+      },
+      {
+        "intent": "inform",
+        "text": "we can create 200 tonnes of cement per wk, we do around 100 tonnes"
+      },
+      {
+        "intent": "inform",
+        "text": "we purchase rawmaterial from chine"
+      },
+      {
+        "intent": "inform",
+        "text": "90 days"
+      },
+      {
+        "intent": "inform",
+        "text": "must be aroubnd 10 cr we work around that"
+      },
+      {
+        "intent": "inform",
+        "text": "6 months"
+      },
+      {
+        "intent": "inform",
+        "text": "our major buyer is the indian government"
+      },
+      {
+        "intent": "inform",
+        "text": "60 days"
+      },
+      {
+        "intent": "inform",
+        "text": "300 crores"
+      },
+      {
+        "intent": "inform",
+        "text": "around 70-80 cr"
+      },
+      {
+        "intent": "inform",
+        "text": "we turnover at aroubnd 300-400 crores"
+      },
+      {
+        "intent": "inform",
+        "text": "we are public it doesnt matter wthr cash or not"
+      },
+      {
+        "intent": "inform",
+        "text": "around 14 pc"
+      },
+      {
+        "intent": "inform",
+        "text": "345"
+      },
+      {
+        "intent": "inform",
+        "text": "14 pc"
+      },
+      {
+        "intent": "inform",
+        "text": "we will pay in frb"
+      },
+      {
+        "intent": "inform",
+        "text": "15 cr"
+      },
+      {
+        "intent": "inform",
+        "text": "we want to set up a small new plant"
+      },
+      {
+        "intent": "inform",
+        "text": "7838930304"
+      },
+      {
+        "intent": "inform",
+        "text": "mr bhatia with 34 pc and mr sharma with 10 pc"
+      },
+      {
+        "intent": "inform",
+        "text": "i have been here for the last 4-5 years"
+      },
+      {
+        "intent": "inform",
+        "text": "textiles"
+      },
+      {
+        "intent": "inform",
+        "text": "its in jabalpur"
+      },
+      {
+        "intent": "inform",
+        "text": "i travel once a week"
+      },
+      {
+        "intent": "inform",
+        "text": "3 machines"
+      },
+      {
+        "intent": "inform",
+        "text": "45 workers"
+      },
+      {
+        "intent": "inform",
+        "text": "we have total capacity of 3 tonnes we produce 1.5 tonnes"
+      },
+      {
+        "intent": "inform",
+        "text": "three parties, reliance and gm"
+      },
+      {
+        "intent": "inform",
+        "text": "we collect in 90 days"
+      },
+      {
+        "intent": "inform",
+        "text": "we have to receive some 1 cr from the market"
+      },
+      {
+        "intent": "inform",
+        "text": "we maintain stock levels for 30 days"
+      },
+      {
+        "intent": "inform",
+        "text": "we have one buyer, hdfc bank."
+      },
+      {
+        "intent": "inform",
+        "text": "we get our payments in 30 days max."
+      },
+      {
+        "intent": "inform",
+        "text": "market owes us 2 cr"
+      },
+      {
+        "intent": "inform",
+        "text": "we sell some 34 lac worth of stuff"
+      },
+      {
+        "intent": "inform",
+        "text": "it is around 34 cr annual"
+      },
+      {
+        "intent": "inform",
+        "text": "its about 30 pc"
+      },
+      {
+        "intent": "inform",
+        "text": "our margins are 22 pc"
+      },
+      {
+        "intent": "inform",
+        "text": "67 employees inclusing me as well"
+      },
+      {
+        "intent": "inform",
+        "text": "12 pc"
+      },
+      {
+        "intent": "inform",
+        "text": "paid"
+      },
+      {
+        "intent": "inform",
+        "text": "15 cr"
+      },
+      {
+        "intent": "inform",
+        "text": "we want to put up new shop at andheri"
+      },
+      {
+        "intent": "inform",
+        "text": "something"
+      },
+      {
+        "intent": "inform",
+        "text": "this this"
+      },
+      {
+        "intent": "inform",
+        "text": "this and this"
+      },
+      {
+        "intent": "inform",
+        "text": "this and this"
+      },
+      {
+        "intent": "inform",
+        "text": "this and this"
+      },
+      {
+        "intent": "inform",
+        "text": "so so doubts"
+      },
+      {
+        "intent": "inform",
+        "text": "doubts and doubts"
+      },
+      {
+        "intent": "inform",
+        "text": "business"
+      },
+      {
+        "intent": "inform",
+        "text": "some other job"
+      },
+      {
+        "intent": "deny",
+        "text": "no"
+      },
+      {
+        "intent": "deny",
+        "text": "No"
+      },
+      {
+        "intent": "deny",
+        "text": "nah"
+      },
+      {
+        "intent": "deny",
+        "text": "Nope"
+      },
+      {
+        "intent": "deny",
+        "text": "noi"
+      },
+      {
+        "intent": "deny",
+        "text": "no"
+      },
+      {
+        "intent": "deny",
+        "text": "noi"
+      },
+      {
+        "intent": "deny",
+        "text": "nope"
+      },
+      {
+        "intent": "deny",
+        "text": "nahh"
+      },
+      {
+        "intent": "deny",
+        "text": "nana"
+      },
+      {
+        "intent": "deny",
+        "text": "no"
+      },
+      {
+        "intent": "deny",
+        "text": "nahi"
+      },
+      {
+        "intent": "deny",
+        "text": "ji nahin"
+      },
+      {
+        "intent": "deny",
+        "text": "jii nahi"
+      },
+      {
+        "intent": "deny",
+        "text": "naa"
+      },
+      {
+        "intent": "prop",
+        "text": "proprietership"
+      },
+      {
+        "intent": "prop",
+        "text": "proprity"
+      },
+      {
+        "intent": "prop",
+        "text": "i am proprieter"
+      },
+      {
+        "intent": "prop",
+        "text": "its proprietership"
+      },
+      {
+        "intent": "prop",
+        "text": "prop"
+      },
+      {
+        "intent": "prop",
+        "text": "properteship"
+      },
+      {
+        "intent": "prop",
+        "text": "propertiship"
+      },
+      {
+        "intent": "prop",
+        "text": "propreitership"
+      },
+      {
+        "intent": "prop",
+        "text": "its properteship"
+      },
+      {
+        "intent": "prop",
+        "text": "it is propertiship"
+      },
+      {
+        "intent": "prop",
+        "text": "it is propreitership"
+      },
+      {
+        "intent": "prop",
+        "text": "its properiteship"
+      },
+      {
+        "intent": "private",
+        "text": "private"
+      },
+      {
+        "intent": "private",
+        "text": "it's private"
+      },
+      {
+        "intent": "private",
+        "text": "private"
+      },
+      {
+        "intent": "private",
+        "text": "pvt"
+      },
+      {
+        "intent": "private",
+        "text": "it is private"
+      },
+      {
+        "intent": "private",
+        "text": "private"
+      },
+      {
+        "intent": "private",
+        "text": "its private ltd"
+      },
+      {
+        "intent": "public",
+        "text": "its public"
+      },
+      {
+        "intent": "public",
+        "text": "public"
+      },
+      {
+        "intent": "public",
+        "text": "public"
+      },
+      {
+        "intent": "public",
+        "text": "public"
+      },
+      {
+        "intent": "public",
+        "text": "it is public"
+      },
+      {
+        "intent": "public",
+        "text": "pub"
+      },
+      {
+        "intent": "public",
+        "text": "publik"
+      },
+      {
+        "intent": "public",
+        "text": "public ltd"
+      },
+      {
+        "intent": "public",
+        "text": "public"
+      },
+      {
+        "intent": "partnership",
+        "text": "its partnership"
+      },
+      {
+        "intent": "partnership",
+        "text": "partnership"
+      },
+      {
+        "intent": "partnership",
+        "text": "partnership"
+      },
+      {
+        "intent": "partnership",
+        "text": "partnership"
+      },
+      {
+        "intent": "partnership",
+        "text": "partner"
+      },
+      {
+        "intent": "partnership",
+        "text": "patner"
+      },
+      {
+        "intent": "partnership",
+        "text": "pship"
+      },
+      {
+        "intent": "partnership",
+        "text": "p'ship"
+      },
+      {
+        "intent": "partnership",
+        "text": "partnerr"
+      },
+      {
+        "intent": "partnership",
+        "text": "partnership"
+      },
+      {
+        "intent": "partnership",
+        "text": "patnershi"
+      },
+      {
+        "intent": "partnership",
+        "text": "its partnership"
+      },
+      {
+        "intent": "manufacturing",
+        "text": "manufacturing"
+      },
+      {
+        "intent": "manufacturing",
+        "text": "manu"
+      },
+      {
+        "intent": "manufacturing",
+        "text": "mnufctr"
+      },
+      {
+        "intent": "manufacturing",
+        "text": "manufacturing"
+      },
+      {
+        "intent": "manufacturing",
+        "text": "manufacturing"
+      },
+      {
+        "intent": "trader",
+        "text": "trader"
+      },
+      {
+        "intent": "trader",
+        "text": "retail"
+      },
+      {
+        "intent": "trader",
+        "text": "wholesale"
+      },
+      {
+        "intent": "trader",
+        "text": "retail and wholesale"
+      },
+      {
+        "intent": "trader",
+        "text": "shop"
+      },
+      {
+        "intent": "trader",
+        "text": "shopkeeper"
+      },
+      {
+        "intent": "trader",
+        "text": "dukaan"
+      },
+      {
+        "intent": "trader",
+        "text": "showroom"
+      },
+      {
+        "intent": "SP",
+        "text": "service"
+      },
+      {
+        "intent": "SP",
+        "text": "service provider"
+      },
+      {
+        "intent": "SP",
+        "text": "service based"
+      },
+      {
+        "intent": "SP",
+        "text": "job"
+      },
+      {
+        "intent": "SP",
+        "text": "handicraft"
+      },
+      {
+        "intent": "SP",
+        "text": "job work"
+      },
+      {
+        "intent": "SP",
+        "text": "sp"
+      },
+      {
+        "intent": "SP",
+        "text": "SP"
+      },
+      {
+        "intent": "SP",
+        "text": "sp"
+      },
+      {
+        "intent": "SP",
+        "text": "sp"
+      },
+      {
+        "intent": "SP",
+        "text": "SP"
+      },
+      {
+        "intent": "public",
+        "text": "public"
+      },
+      {
+        "intent": "public",
+        "text": "pub"
+      },
+      {
+        "intent": "public",
+        "text": "publik"
+      },
+      {
+        "intent": "repeat",
+        "text": "what"
+      },
+      {
+        "intent": "repeat",
+        "text": "what?"
+      },
+      {
+        "intent": "repeat",
+        "text": "repeat"
+      },
+      {
+        "intent": "repeat",
+        "text": "pardon"
+      },
+      {
+        "intent": "repeat",
+        "text": "can you say that again"
+      },
+      {
+        "intent": "repeat",
+        "text": "can you please repeat"
+      },
+      {
+        "intent": "repeat",
+        "text": "repeat please"
+      },
+      {
+        "intent": "repeat",
+        "text": "i did not understand"
+      },
+      {
+        "intent": "repeat",
+        "text": "not understood"
+      },
+      {
+        "intent": "repeat",
+        "text": "what?"
+      },
+      {
+        "intent": "repeat",
+        "text": "whatt??"
+      },
+      {
+        "intent": "repeat",
+        "text": "i didnt get it"
+      },
+      {
+        "intent": "fmcg",
+        "text": "fmcg"
+      },
+      {
+        "intent": "fmcg",
+        "text": "fmcg"
+      },
+      {
+        "intent": "fmcg",
+        "text": "FMCG"
+      },
+      {
+        "intent": "garments",
+        "text": "garments"
+      },
+      {
+        "intent": "garments",
+        "text": "gaments"
+      },
+      {
+        "intent": "garments",
+        "text": "clothes"
+      },
+      {
+        "intent": "footwear",
+        "text": "footwear"
+      },
+      {
+        "intent": "footwear",
+        "text": "foowear"
+      },
+      {
+        "intent": "footwear",
+        "text": "shoes"
+      },
+      {
+        "intent": "chemicals",
+        "text": "chemicals"
+      },
+      {
+        "intent": "chemicals",
+        "text": "chemic"
+      },
+      {
+        "intent": "chemicals",
+        "text": "chemical"
+      }
+    ],
+    "regex_features": [],
+    "lookup_tables": [],
+    "entity_synonyms": []
+  }
+}

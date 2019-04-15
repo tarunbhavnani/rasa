@@ -1,0 +1,33 @@
+{
+  "action_fingerprints": {
+    "action_listen": {
+      "slots": []
+    },
+    "action_interview_start": {
+      "slots": [
+        "counter",
+        "current"
+      ]
+    },
+    "action_default_fallback": {
+      "slots": []
+    },
+    "action_fetch_details": {
+      "slots": []
+    }
+  },
+  "rasa_core": "0.12.1",
+  "python": "3.6.5",
+  "max_histories": [
+    5,
+    5,
+    null
+  ],
+  "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
+  "policy_names": [
+    "rasa_core.policies.memoization.MemoizationPolicy",
+    "rasa_core.policies.keras_policy.KerasPolicy",
+    "rasa_core.policies.fallback.FallbackPolicy"
+  ],
+  "trained_at": "20190409-164852"
+}

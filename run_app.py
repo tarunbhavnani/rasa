@@ -21,7 +21,7 @@ agent = Agent.load(path=core, interpreter = nlu_interpreter, action_endpoint = a
 
 
 #input_channel = SlackInput('xoxb-542065604356-542500977682-faR2rS0xAcTANpn4wAU8hAiF') #your bot user authentication token
-input_channel = SlackInput('xoxb-542065604356-582580159955-Ii4qi7QBac2dIwPh4MZ2R3Dc') #your bot user authentication token
+input_channel = SlackInput('xoxb-token') #your bot user authentication token
 agent.handle_channels([input_channel], 5004, serve_forever=True)
  
 #https://c1b4869e.ngrok.io/webhooks/slack/webhook
